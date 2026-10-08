@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Theta Xi Fraternity Alpha Sigma Chapter</title>
-  <meta name="description" content="Theta Xi Fraternity, Alpha Sigma Chapter at Bradley University. Founded October 3, 1948.">
+  <title>Theta Xi Fraternity | Alpha Sigma Chapter at Bradley University</title>
+  <meta name="description" content="Theta Xi Fraternity, Alpha Sigma Chapter at Bradley University. Brotherhood, scholarship and leadership since 1948.">
+  <meta name="theme-color" content="#0a1d3c">
+  <link rel="icon" href="assets/images/crest.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -17,22 +19,25 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html">
-        <!-- TODO: swap in the crest image once we have a high quality copy (RAIL item 10) -->
-        <span class="brand-mark" aria-hidden="true">ΘΞ</span>
-        <span class="brand-name">Theta Xi <span>Alpha Sigma</span></span>
+        <!-- TODO: crest is a small copy from the old site. Swap in a high quality version (RAIL item 10). -->
+        <img src="assets/images/crest.png" alt="" width="34" height="47">
+        <span class="brand-name">Theta Xi <small>Alpha Sigma &middot; Bradley</small></span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="bars" aria-hidden="true"><span></span><span></span></span>
+        Menu
+      </button>
 
       <nav id="site-nav" class="site-nav" aria-label="Main">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="join.html">Join</a></li>
           <li><a href="scholarships.html">Scholarships</a></li>
           <li><a href="news-and-events.html">News and Events</a></li>
           <li><a href="giving-back.html">Giving Back</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li class="nav-join"><a href="join.html">Join</a></li>
         </ul>
       </nav>
     </div>
@@ -40,48 +45,97 @@
 
   <main id="main">
 
-    <!-- Hero. Drop the group photo at assets/images/hero.jpg and it shows up behind the text.
-         Until then you get the blue gradient. -->
     <section class="hero">
-      <div class="hero-inner">
-        <h1>Theta Xi Fraternity</h1>
-        <p class="hero-sub">Alpha Sigma Chapter at Bradley University</p>
+      <div class="container hero-grid">
+        <div class="reveal">
+          <p class="hero-meta"><img src="assets/images/crest.png" alt="" width="30" height="41">Alpha Sigma Chapter at Bradley University</p>
+          <h1>Brothers at Bradley <em>since 1948.</em></h1>
+          <p class="lead">A home on campus, a scholarship fund that pays real tuition, and alumni who stay involved long after graduation.</p>
+          <div class="actions">
+            <a class="button" href="join.html">Join Theta Xi <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            <a class="button ghost" href="giving-back.html">Support the chapter</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal" data-delay="1">
+          <!-- TODO: hero photos (RAIL item 4). Put last year's alumni picture in hv-a as assets/images/hero.jpg:
+               <div class="photo hv-a"><img src="assets/images/hero.jpg" alt="Alpha Sigma brothers and alumni, 2025" fetchpriority="high"></div> -->
+          <div class="photo-slot hv-a"><span>Photo: brothers and alumni, 2025</span></div>
+          <div class="photo hv-b">
+            <img src="assets/images/blue-iris-2023.jpg" alt="Hunter Bent and Andre Isola receiving the 2023 Blue Iris Scholarship with alumni" width="750" height="557">
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section legacy">
-      <div class="container narrow">
-        <h2>Building The Theta Xi Legacy</h2>
-        <p>From our founding on October 3, 1948, to today, the Alpha Sigma Chapter has been a staple of Bradley University’s Greek community and a home away from home for generations of brothers. At the heart of our brotherhood are the members of our collegiate chapter who help maintain Alpha Sigma’s pristine status on campus. Today, our active brothers face rising costs of tuition, textbooks, and other college-related expenses that may restrict their ability to participate in organizations like Theta Xi. If we wish for Alpha Sigma to maintain its strong presence and status on campus, we must ensure that qualified members feel secure in their financial future by providing merit-based scholarships in conjunction with a competitive living environment.</p>
-        <p>Through careful planning and consideration, Alpha Sigma alumni and undergraduate leadership have developed a solid plan to address the long-term viability of the Theta Xi experience on Bradley’s campus. A dedicated scholarship fund through the Theta Xi Foundation has been growing since 2006. Since 2011, we have awarded numerous scholarships to qualified brothers totaling nearly $200,000, with the Alpha Sigma brothers receiving a combined $50,000 in both chapter and national scholarships just last year. The Alpha Sigma Chapter of Theta Xi is the top chapter of Theta Xi for giving out scholarships. We also give back the most scholarship money to Bradley University students out of any Fraternity on campus.</p>
-      </div>
-    </section>
-
-    <section class="section welcome">
-      <div class="container narrow">
-        <h2>Welcome</h2>
-        <p class="lead">Our purpose is to provide a college home environment for its active members in which fellowship and alumni guidance lead to wholesome mental, moral, physical, and spiritual growth. Theta Xi actively supports college and community efforts to make our members more mature and useful units of society.</p>
-      </div>
-    </section>
-
-    <section class="section cards-section" aria-label="Get involved">
+    <section class="section on-navy bend manifesto" aria-label="Our purpose">
       <div class="container">
-        <div class="cards">
-          <article class="card">
+        <blockquote class="reveal">
+          <p>&ldquo;Our purpose is to provide a college home in which fellowship and alumni guidance lead to wholesome mental, moral, physical, and spiritual growth.&rdquo;</p>
+          <cite>Theta Xi, Alpha Sigma Chapter</cite>
+        </blockquote>
+        <div class="stats reveal" data-delay="1">
+          <div class="stat"><strong>1948</strong><span>Alpha Sigma chartered at Bradley</span></div>
+          <div class="stat"><strong>~$200K</strong><span>in scholarships awarded since 2011</span></div>
+          <div class="stat"><strong>$50K</strong><span>to brothers in chapter and national scholarships last year</span></div>
+          <div class="stat"><strong>#1</strong><span>Theta Xi chapter nationwide for scholarship giving</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container legacy-grid">
+        <div class="sticky reveal">
+          <h2>Building the Theta Xi <em>legacy</em></h2>
+        </div>
+        <div class="legacy-copy prose reveal" data-delay="1">
+          <p>Since our founding on October 3, 1948, the Alpha Sigma Chapter has been a staple of Bradley University&rsquo;s Greek community and a home away from home for generations of brothers. At the heart of the brotherhood are the members of our collegiate chapter, who keep Alpha Sigma&rsquo;s standing on campus strong.</p>
+          <p>Today, our brothers face rising costs for tuition, textbooks and everything else college asks of them. Alumni and undergraduate leadership built a long-term plan to answer that: merit-based scholarships and a competitive place to live.</p>
+          <p>A dedicated scholarship fund through the Theta Xi Foundation has been growing since 2006. Since 2011 we have awarded nearly $200,000 to qualified brothers, and we give more scholarship money to Bradley students than any other fraternity on campus.</p>
+          <a class="text-link" href="about.html">More about the chapter <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band" aria-labelledby="paths-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="paths-title">Where to start</h2>
+          <p>Thinking about joining, looking for a scholarship, or ready to give back.</p>
+        </div>
+        <div class="paths">
+          <a class="path join reveal" href="join.html">
+            <div class="path-bg" aria-hidden="true">
+              <!-- TODO: swap for a recruitment or brotherhood photo (RAIL item 5) -->
+              <img src="assets/images/house-renovation.jpg" alt="" loading="lazy">
+            </div>
             <h3>Join Theta Xi</h3>
-            <p>Discover if Theta Xi is right for you.</p>
-            <a class="button" href="join.html">Learn more</a>
-          </article>
-          <article class="card">
+            <p>Meet the brothers, visit the house, and find out if Alpha Sigma is the right fit for you.</p>
+            <span class="go">Membership <span class="arrow" aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="path scholar reveal" data-delay="1" href="scholarships.html">
+            <span class="figure-big">$50,000</span>
             <h3>Scholarships</h3>
-            <p>The Alpha Sigma Chapter is the Foundation’s largest scholarship fund of all Theta Xi Chapters nationwide.</p>
-            <a class="button" href="scholarships.html">Learn more</a>
-          </article>
-          <article class="card">
-            <h3>Give Today</h3>
-            <p>Your support makes a difference in the future of the Alpha Sigma Chapter of Theta Xi.</p>
-            <a class="button" href="giving-back.html">Learn more</a>
-          </article>
+            <p>The largest scholarship fund of any Theta Xi chapter in the country.</p>
+            <span class="go">See scholarships <span class="arrow" aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="path give reveal" data-delay="2" href="giving-back.html">
+            <h3>Give today</h3>
+            <p>Your gift funds scholarships and keeps the chapter house in good shape for the next class.</p>
+            <span class="go">Ways to give <span class="arrow" aria-hidden="true">&rarr;</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container visit reveal">
+        <div>
+          <h2>Come see the house</h2>
+          <address>1317 W. Fredonia Ave., Peoria, IL 61601</address>
+        </div>
+        <div class="actions">
+          <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=1317+W+Fredonia+Ave+Peoria+IL" target="_blank" rel="noopener">Get directions</a>
+          <a class="button ghost" href="contact.html">Contact us</a>
         </div>
       </div>
     </section>
@@ -89,11 +143,45 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>Copyright © <span id="year">2026</span> Theta Xi Fraternity Alpha Sigma Chapter. All Rights Reserved.</p>
-      <!-- TODO: this Instagram link shows "Profile isn't available" on the live site (RAIL item 2).
-           Replace the handle once we confirm the right one. -->
-      <a class="social" href="https://www.instagram.com/thetaxi_alphasigma" target="_blank" rel="noopener">Instagram</a>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/crest.png" alt="Theta Xi crest" width="56" height="77">
+          <p class="motto">Juncti Juvant</p>
+          <p>Theta Xi Fraternity, Alpha Sigma Chapter at Bradley University. Chartered October 3, 1948.</p>
+        </div>
+        <div>
+          <h2>Chapter</h2>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="about.html#members">Members</a></li>
+            <li><a href="news-and-events.html">News and events</a></li>
+            <li><a href="join.html">Join Theta Xi</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Support</h2>
+          <ul>
+            <li><a href="scholarships.html">Scholarships</a></li>
+            <li><a href="giving-back.html">Giving back</a></li>
+            <li><a href="contact.html">Alumni association</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Visit</h2>
+          <address>
+            1317 W. Fredonia Ave.<br>
+            Peoria, IL 61601
+          </address>
+          <!-- TODO: this Instagram link shows "Profile isn't available" on the live site (RAIL item 2).
+               Replace the handle once we confirm the right one. -->
+          <p style="margin-top:1rem"><a href="https://www.instagram.com/thetaxi_alphasigma" target="_blank" rel="noopener">Instagram</a></p>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>&copy; <span id="year">2026</span> Theta Xi Fraternity, Alpha Sigma Chapter.</p>
+        <p><a href="contact.html">Contact us</a></p>
+      </div>
     </div>
   </footer>
 

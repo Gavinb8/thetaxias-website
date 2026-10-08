@@ -23,7 +23,8 @@ Before you start working, pull the latest changes so you don't overwrite someone
 ## Folder layout
 
 - `index.html` and the other page files at the top level are the site itself.
-- `css/` and `js/` hold the shared styles and scripts.
+- `css/styles.css` is the only stylesheet. Colors, fonts and spacing are tokens at the top of that file, so change them there instead of in page files. `js/site.js` handles the mobile menu, scroll fade-ins and the placeholder form message.
+- Photos we don't have yet show as navy "Photo: ..." boxes. Each one has a TODO comment above it with the file name to save and the `<img>` line to swap in.
 - `assets/images/` is where site photos go. Put the Home hero photo at `assets/images/hero.jpg`.
 
 ## What's in baseline/
@@ -36,3 +37,5 @@ Before you start working, pull the latest changes so you don't overwrite someone
 
 - This repo is public. Don't commit private member info, phone numbers, or anything we wouldn't put on the website.
 - Work items live in the Google Sheet "Theta Xi Website RAIL". Update it when you pick something up.
+- The same sheet has a "Weekly Log" tab. Add a line for anything you finished so the weekly report to the team is easy to write.
+- Don't use em dashes in visible site text. Use a period, comma or colon.

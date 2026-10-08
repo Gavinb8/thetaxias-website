@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Scholarships | Theta Xi Fraternity Alpha Sigma Chapter</title>
-  <meta name="description" content="Scholarships offered by the Theta Xi Fraternity Alpha Sigma Chapter at Bradley University, with applications and a way to donate.">
+  <title>Scholarships | Theta Xi Alpha Sigma</title>
+  <meta name="description" content="Theta Xi Alpha Sigma runs the largest scholarship fund of any Theta Xi chapter. See current scholarships and applications.">
+  <meta name="theme-color" content="#0a1d3c">
+  <link rel="icon" href="assets/images/crest.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/scholarships.css">
 </head>
 <body>
 
@@ -18,22 +19,25 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html">
-        <!-- TODO: swap in the crest image once we have a high quality copy (RAIL item 10) -->
-        <span class="brand-mark" aria-hidden="true">ΘΞ</span>
-        <span class="brand-name">Theta Xi <span>Alpha Sigma</span></span>
+        <!-- TODO: crest is a small copy from the old site. Swap in a high quality version (RAIL item 10). -->
+        <img src="assets/images/crest.png" alt="" width="34" height="47">
+        <span class="brand-name">Theta Xi <small>Alpha Sigma &middot; Bradley</small></span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="bars" aria-hidden="true"><span></span><span></span></span>
+        Menu
+      </button>
 
       <nav id="site-nav" class="site-nav" aria-label="Main">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="join.html">Join</a></li>
           <li><a href="scholarships.html" aria-current="page">Scholarships</a></li>
           <li><a href="news-and-events.html">News and Events</a></li>
           <li><a href="giving-back.html">Giving Back</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li class="nav-join"><a href="join.html">Join</a></li>
         </ul>
       </nav>
     </div>
@@ -41,92 +45,141 @@
 
   <main id="main">
 
-    <section class="hero hero-short">
-      <div class="hero-inner">
-        <h1>Scholarships</h1>
-      </div>
-    </section>
-
-    <section class="section intro">
-      <div class="container intro-grid">
-        <figure class="photo-slot">
-          <!-- TODO: this is the 2023 Blue Iris recipients photo. Replace with a newer photo, then save it as
-               assets/images/scholarship-recipients.jpg and swap this placeholder for an img tag with alt text. -->
-          <div class="photo-placeholder" role="img" aria-label="Photo placeholder: 2023 Blue Iris Scholarship recipients">Photo coming soon</div>
-          <figcaption>Left: Our recipients of the 2023 Blue Iris Scholarship: Hunter Bent and Andre Isola!</figcaption>
+    <section class="page-head">
+      <div class="container page-head-grid">
+        <div>
+          <h1 class="reveal">Scholarships that pay <em>real tuition.</em></h1>
+          <p class="lead reveal" data-delay="1">Alpha Sigma holds the Theta Xi Foundation&rsquo;s largest scholarship fund of any chapter nationwide. Last year alone, brothers received $50,000, more per member than any other fraternity at Bradley.</p>
+        </div>
+        <figure class="reveal" data-delay="1">
+          <!-- TODO: 2023 photo. Replace with a newer recipients photo (RAIL item 12). -->
+          <div class="photo"><img src="assets/images/blue-iris-2023.jpg" alt="Hunter Bent and Andre Isola holding Blue Iris Scholarship checks with Theta Xi alumni" width="750" height="557"></div>
+          <figcaption>Hunter Bent and Andre Isola, 2023 Blue Iris Scholarship recipients.</figcaption>
         </figure>
-        <div class="intro-text">
-          <p>The Alpha Sigma Chapter is the Theta Xi Foundation’s largest scholarship fund of all Theta Xi Chapters nationwide. Our chapter and alumni are committed to assisting hard-working students pay for school. Last academic year alone, we distributed <strong>$50,000 in scholarships</strong>, which is more money per member than any other fraternity on Bradley's campus. As years go on, we expect to increase our scholarship pool as well.</p>
-          <p>The Janus and Gleespen scholarships are funded through endowments that grow via investments and donations. Tax-deductible donations to these endowments can be made through the Theta Xi Foundation.</p>
-          <p class="lead">Find available applications below!</p>
-        </div>
       </div>
     </section>
 
-    <section class="section contribute">
-      <div class="container narrow">
-        <h2>Contribute to our Scholarships</h2>
-        <p>Please select "Janus Scholarship" and specify the specific endowment in the notes when you make your contribution.</p>
-        <!-- TODO: test this DONATE link (Theta Xi Foundation contribution page). -->
-        <a class="button" href="https://contributions.omegafi.com/contributions/product/theta-xi-foundation/" target="_blank" rel="noopener">Donate</a>
-      </div>
-    </section>
-
-    <section class="section current">
+    <section class="section" id="current">
       <div class="container">
-        <h2>Current Scholarships</h2>
-        <!-- The GoDaddy page used tabs (Book, Janus, Blue Iris, Gary Gleespen) and repeated headings in the
-             panels. Cards below use the tab names, one per description, in the original order.
-             TODO: confirm each description sits under the right scholarship name. -->
-        <div class="cards scholarship-cards">
-          <article class="card">
-            <h3>Book Scholarship</h3>
-            <p>An endowment awarding two $500 scholarships to any incoming Freshman (2027) or Sophomore (2026). Affiliation with Theta Xi is not required, and recipients will be determined by extracurricular activities and leadership roles held. Scholarships awarded early in the Fall Semester</p>
-            <!-- TODO: test this Apply Here link (Google Form). -->
-            <a class="button" href="https://forms.gle/fXJtpxbddqCfQYJQ8" target="_blank" rel="noopener">Apply Here</a>
-          </article>
-          <article class="card">
+        <div class="section-head reveal">
+          <h2>Current scholarships</h2>
+          <p>The Janus and Gleespen scholarships are endowments that grow through investment and donations.</p>
+        </div>
+        <!-- TODO: confirm each description sits under the right scholarship name, and add newer
+             scholarships (RAIL items 12 and 13). -->
+        <div class="awards">
+          <article class="award featured reveal">
+            <p class="amount">$5,000</p>
+            <p class="amount-note">each year, to three brothers</p>
             <h3>Janus Scholarship</h3>
-            <p>An endowment that awards $5,000 annually to three brothers each living in the chapter house with a GPA greater than 3.0.</p>
+            <p>An endowment for brothers living in the chapter house with a GPA above 3.0.</p>
+            <ul class="tags"><li>Lives in house</li><li>GPA 3.0+</li></ul>
           </article>
-          <article class="card">
+          <article class="award reveal" data-delay="1">
+            <p class="amount">$1,200</p>
+            <p class="amount-note">per semester, for up to four years</p>
             <h3>Blue Iris Scholarship</h3>
-            <p>A four-year scholarship issued each fall. This fall it will award $1,200 / semester scholarships to three newly initiated brothers with GPAs greater than 3.25.</p>
+            <p>Issued each fall to three newly initiated brothers with GPAs above 3.25.</p>
+            <ul class="tags"><li>New members</li><li>GPA 3.25+</li></ul>
           </article>
-          <article class="card">
+          <article class="award reveal">
+            <p class="amount">2 &times; $500</p>
+            <p class="amount-note">awarded early in the fall semester</p>
+            <h3>Book Scholarship</h3>
+            <p>Open to any incoming freshman or sophomore. Affiliation with Theta Xi is not required. Recipients are chosen on extracurricular activities and leadership roles.</p>
+            <ul class="tags"><li>Open to all Bradley students</li></ul>
+            <div class="actions">
+              <!-- TODO: test this Apply link (Google Form) (RAIL item 14) -->
+              <a class="button" href="https://forms.gle/fXJtpxbddqCfQYJQ8" target="_blank" rel="noopener">Apply now <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="award reveal" data-delay="1">
+            <p class="amount">$500+</p>
+            <p class="amount-note">each year, to multiple brothers</p>
             <h3>Gary Gleespen Scholarship</h3>
-            <p>An endowment that awards more than $500 each year to multiple brothers showing a high level of academic performance or improvement.</p>
+            <p>An endowment for brothers showing a high level of academic performance or improvement.</p>
+            <ul class="tags"><li>Academic achievement</li></ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section forms">
-      <div class="container narrow">
-        <h2>Scholarship Forms</h2>
-        <!-- TODO: test both download links. They point at the old GoDaddy file host (img1.wsimg.com), so
-             download the files into assets/docs/ and relink before GoDaddy is shut off. -->
-        <ul class="form-list">
-          <li>
-            <span class="form-name">Janus Scholarship Application <span class="form-type">(doc)</span></span>
-            <a class="button" href="https://img1.wsimg.com/blobby/go/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/downloads/Janus%20Scholarship%20Info%20and%20Application%20Form%2020.doc?ver=1757480250410" target="_blank" rel="noopener">Download</a>
-          </li>
-          <li>
-            <span class="form-name">Common Scholarship Application <span class="form-type">(docx)</span></span>
-            <a class="button" href="https://img1.wsimg.com/blobby/go/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/downloads/Common_Scholarship_Application_Final%202022.02.docx?ver=1757480250411" target="_blank" rel="noopener">Download</a>
-          </li>
-        </ul>
+    <section class="section band tight" id="forms">
+      <div class="container split">
+        <div class="reveal">
+          <h2>Application forms</h2>
+          <p class="lead">Download, fill out and return to the scholarship chairman.</p>
+        </div>
+        <!-- TODO: both files live on the old GoDaddy host. Download them into assets/docs/ and relink
+             before GoDaddy is shut off (RAIL item 14). -->
+        <div class="downloads reveal" data-delay="1">
+          <div class="download">
+            <div><strong>Janus Scholarship application</strong><span>Word document (.doc)</span></div>
+            <a class="button ghost" href="https://img1.wsimg.com/blobby/go/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/downloads/Janus%20Scholarship%20Info%20and%20Application%20Form%2020.doc?ver=1757480250410" target="_blank" rel="noopener">Download</a>
+          </div>
+          <div class="download">
+            <div><strong>Common Scholarship application</strong><span>Word document (.docx)</span></div>
+            <a class="button ghost" href="https://img1.wsimg.com/blobby/go/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/downloads/Common_Scholarship_Application_Final%202022.02.docx?ver=1757480250411" target="_blank" rel="noopener">Download</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section on-navy bend tight">
+      <div class="container visit reveal">
+        <div>
+          <h2>Grow the endowment</h2>
+          <p>Tax-deductible gifts go through the Theta Xi Foundation. Select &ldquo;Janus Scholarship&rdquo; and name the endowment in the notes.</p>
+        </div>
+        <div class="actions">
+          <!-- TODO: test this Donate link (RAIL item 14) -->
+          <a class="button" href="https://contributions.omegafi.com/contributions/product/theta-xi-foundation/" target="_blank" rel="noopener">Donate <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
       </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>Copyright © <span id="year">2026</span> Theta Xi Fraternity Alpha Sigma Chapter. All Rights Reserved.</p>
-      <!-- TODO: this Instagram link shows "Profile isn't available" on the live site (RAIL item 2).
-           Replace the handle once we confirm the right one. -->
-      <a class="social" href="https://www.instagram.com/thetaxi_alphasigma" target="_blank" rel="noopener">Instagram</a>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/crest.png" alt="Theta Xi crest" width="56" height="77">
+          <p class="motto">Juncti Juvant</p>
+          <p>Theta Xi Fraternity, Alpha Sigma Chapter at Bradley University. Chartered October 3, 1948.</p>
+        </div>
+        <div>
+          <h2>Chapter</h2>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="about.html#members">Members</a></li>
+            <li><a href="news-and-events.html">News and events</a></li>
+            <li><a href="join.html">Join Theta Xi</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Support</h2>
+          <ul>
+            <li><a href="scholarships.html">Scholarships</a></li>
+            <li><a href="giving-back.html">Giving back</a></li>
+            <li><a href="contact.html">Alumni association</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Visit</h2>
+          <address>
+            1317 W. Fredonia Ave.<br>
+            Peoria, IL 61601
+          </address>
+          <!-- TODO: this Instagram link shows "Profile isn't available" on the live site (RAIL item 2).
+               Replace the handle once we confirm the right one. -->
+          <p style="margin-top:1rem"><a href="https://www.instagram.com/thetaxi_alphasigma" target="_blank" rel="noopener">Instagram</a></p>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>&copy; <span id="year">2026</span> Theta Xi Fraternity, Alpha Sigma Chapter.</p>
+        <p><a href="contact.html">Contact us</a></p>
+      </div>
     </div>
   </footer>
 

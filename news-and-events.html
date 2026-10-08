@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>News and Events | Theta Xi Fraternity Alpha Sigma Chapter</title>
-  <meta name="description" content="News and upcoming events from the Theta Xi Fraternity, Alpha Sigma Chapter at Bradley University.">
+  <title>News and Events | Theta Xi Alpha Sigma</title>
+  <meta name="description" content="Upcoming events and recent news from Theta Xi's Alpha Sigma Chapter at Bradley University.">
+  <meta name="theme-color" content="#0a1d3c">
+  <link rel="icon" href="assets/images/crest.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/news-and-events.css">
 </head>
 <body>
 
@@ -18,22 +19,25 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html">
-        <!-- TODO: swap in the crest image once we have a high quality copy (RAIL item 10) -->
-        <span class="brand-mark" aria-hidden="true">ΘΞ</span>
-        <span class="brand-name">Theta Xi <span>Alpha Sigma</span></span>
+        <!-- TODO: crest is a small copy from the old site. Swap in a high quality version (RAIL item 10). -->
+        <img src="assets/images/crest.png" alt="" width="34" height="47">
+        <span class="brand-name">Theta Xi <small>Alpha Sigma &middot; Bradley</small></span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="bars" aria-hidden="true"><span></span><span></span></span>
+        Menu
+      </button>
 
       <nav id="site-nav" class="site-nav" aria-label="Main">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="join.html">Join</a></li>
           <li><a href="scholarships.html">Scholarships</a></li>
           <li><a href="news-and-events.html" aria-current="page">News and Events</a></li>
           <li><a href="giving-back.html">Giving Back</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li class="nav-join"><a href="join.html">Join</a></li>
         </ul>
       </nav>
     </div>
@@ -41,57 +45,88 @@
 
   <main id="main">
 
-    <section class="page-intro">
+    <section class="page-head">
       <div class="container">
-        <h1>News and Events</h1>
-        <p class="page-sub">Alpha Sigma Chapter at Bradley University</p>
+        <h1 class="reveal">News and <em>events</em></h1>
+        <p class="lead reveal" data-delay="1">What&rsquo;s happening at the house, on campus and with our alumni.</p>
       </div>
     </section>
 
-    <!-- TODO: News posts (RAIL item 15). Add the recent posts list here, newest first.
-         Each post can use the same .card pattern as the home page. Example:
-
-    <section class="section news-section" aria-labelledby="recent-posts">
+    <section class="section" aria-labelledby="upcoming">
       <div class="container">
-        <h2 id="recent-posts">Recent posts</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Post title</h3>
-            <p>One or two sentence summary of the post.</p>
-            <a class="button" href="#">Read more</a>
+        <div class="section-head reveal">
+          <h2 id="upcoming">Upcoming events</h2>
+        </div>
+        <!-- TODO: events (RAIL item 15). Add one .event per event, soonest first, inside .events,
+             then delete the .empty-state block. Copy this:
+
+        <div class="events">
+          <article class="event">
+            <time datetime="2026-11-14"><b>14</b><small>Nov</small></time>
+            <div>
+              <h3>Event name</h3>
+              <p>6:00 pm &middot; Location. One line about the event.</p>
+            </div>
+            <a class="text-link" href="#">Details</a>
           </article>
         </div>
-      </div>
-    </section>
-    -->
-
-    <section class="section events-section" aria-labelledby="upcoming-events">
-      <div class="container">
-        <!-- TODO: Event cards (RAIL item 15). Put upcoming events in the .events-list below, one
-             .card per event, soonest first. Remove the empty message once the first event is added.
-             Example event card:
-
-        <article class="card event-card">
-          <p class="event-date">Date and time</p>
-          <h3>Event name</h3>
-          <p>Location and a short description.</p>
-        </article>
         -->
-        <h2 id="upcoming-events">Upcoming Events</h2>
-        <div class="events-list">
-          <p class="events-empty">No upcoming events.</p>
+        <div class="empty-state reveal">
+          <img src="assets/images/crest.png" alt="" width="60" height="83">
+          <div>
+            <h3>No events posted yet</h3>
+            <p>Check back soon. In the meantime, follow the chapter on Instagram for the latest from the house.</p>
+            <a class="button ghost" href="https://www.instagram.com/thetaxi_alphasigma" target="_blank" rel="noopener">Follow on Instagram</a>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- TODO: recent news posts (RAIL item 15). Add a "Recent news" section here, newest first.
+         The .awards / .award pattern from scholarships works well for post cards. -->
 
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>Copyright © <span id="year">2026</span> Theta Xi Fraternity Alpha Sigma Chapter. All Rights Reserved.</p>
-      <!-- TODO: this Instagram link shows "Profile isn't available" on the live site (RAIL item 2).
-           Replace the handle once we confirm the right one. -->
-      <a class="social" href="https://www.instagram.com/thetaxi_alphasigma" target="_blank" rel="noopener">Instagram</a>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/crest.png" alt="Theta Xi crest" width="56" height="77">
+          <p class="motto">Juncti Juvant</p>
+          <p>Theta Xi Fraternity, Alpha Sigma Chapter at Bradley University. Chartered October 3, 1948.</p>
+        </div>
+        <div>
+          <h2>Chapter</h2>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="about.html#members">Members</a></li>
+            <li><a href="news-and-events.html">News and events</a></li>
+            <li><a href="join.html">Join Theta Xi</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Support</h2>
+          <ul>
+            <li><a href="scholarships.html">Scholarships</a></li>
+            <li><a href="giving-back.html">Giving back</a></li>
+            <li><a href="contact.html">Alumni association</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Visit</h2>
+          <address>
+            1317 W. Fredonia Ave.<br>
+            Peoria, IL 61601
+          </address>
+          <!-- TODO: this Instagram link shows "Profile isn't available" on the live site (RAIL item 2).
+               Replace the handle once we confirm the right one. -->
+          <p style="margin-top:1rem"><a href="https://www.instagram.com/thetaxi_alphasigma" target="_blank" rel="noopener">Instagram</a></p>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>&copy; <span id="year">2026</span> Theta Xi Fraternity, Alpha Sigma Chapter.</p>
+        <p><a href="contact.html">Contact us</a></p>
+      </div>
     </div>
   </footer>
 
