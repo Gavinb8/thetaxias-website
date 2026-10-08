@@ -41,9 +41,15 @@ document.documentElement.classList.add("js");
   }).observe(marker);
 })();
 
-// Fade sections in as they scroll into view. Reduced motion is handled in CSS.
+// Fade sections in as they scroll into view. Also draws the bend stripe on .bend
+// sections and builds [data-stagger] containers child by child. Reduced motion is handled in CSS.
 (function () {
-  var items = document.querySelectorAll(".reveal");
+  document.querySelectorAll("[data-stagger]").forEach(function (group) {
+    Array.prototype.forEach.call(group.children, function (child, i) {
+      child.style.setProperty("--i", i);
+    });
+  });
+  var items = document.querySelectorAll(".reveal, .bend, [data-stagger]");
   if (!("IntersectionObserver" in window)) {
     items.forEach(function (el) { el.classList.add("is-in"); });
     return;
@@ -57,6 +63,61 @@ document.documentElement.classList.add("js");
     });
   }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
   items.forEach(function (el) { io.observe(el); });
+})();
+
+// Count-up numbers. The real value is written in the HTML (e.g. "$50K"), so it is correct
+// without JS and for screen readers. This only animates from 0 up to that value, once.
+(function () {
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var els = document.querySelectorAll("[data-countup]");
+  if (reduce || !("IntersectionObserver" in window) || !els.length) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      io.unobserve(entry.target);
+      var el = entry.target;
+      var text = el.textContent;
+      var match = text.match(/[\d,]+/);
+      if (!match) return;
+      var target = parseInt(match[0].replace(/,/g, ""), 10);
+      var useCommas = match[0].indexOf(",") > -1;
+      var start = null;
+      el.setAttribute("aria-label", text);
+      function frame(t) {
+        if (!start) start = t;
+        var p = Math.min((t - start) / 1200, 1);
+        var eased = 1 - Math.pow(1 - p, 4);
+        var n = Math.round(target * eased);
+        el.textContent = text.replace(match[0], useCommas ? n.toLocaleString("en-US") : String(n));
+        if (p < 1) requestAnimationFrame(frame);
+        else el.textContent = text;
+      }
+      requestAnimationFrame(frame);
+    });
+  }, { threshold: 0.6 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+
+// Name ticker. Students only edit the one <ul> of names in the HTML. This copies it once
+// (hidden from screen readers) so the loop is seamless, and wires up the pause button.
+(function () {
+  document.querySelectorAll(".ticker-track").forEach(function (track) {
+    var list = track.querySelector("ul");
+    if (!list) return;
+    var copy = list.cloneNode(true);
+    copy.setAttribute("aria-hidden", "true");
+    track.appendChild(copy);
+    // Speed scales with list length so short and long lists move at the same pace
+    track.style.setProperty("--ticker-speed", Math.max(25, list.children.length * 5) + "s");
+  });
+  document.querySelectorAll(".ticker-toggle").forEach(function (btn) {
+    var section = btn.closest(".names");
+    btn.addEventListener("click", function () {
+      var paused = section.classList.toggle("paused");
+      btn.setAttribute("aria-pressed", paused ? "true" : "false");
+      btn.textContent = paused ? "Play" : "Pause";
+    });
+  });
 })();
 
 // Forms aren't connected to a service yet (RAIL item 20). Until they are, stop the

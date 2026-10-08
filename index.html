@@ -60,7 +60,7 @@
           <!-- TODO: hero photos (RAIL item 4). Put last year's alumni picture in hv-a as assets/images/hero.jpg:
                <div class="photo hv-a"><img src="assets/images/hero.jpg" alt="Alpha Sigma brothers and alumni, 2025" fetchpriority="high"></div> -->
           <div class="photo-slot hv-a"><span>Photo: brothers and alumni, 2025</span></div>
-          <div class="photo hv-b">
+          <div class="photo duotone hv-b">
             <img src="assets/images/blue-iris-2023.jpg" alt="Hunter Bent and Andre Isola receiving the 2023 Blue Iris Scholarship with alumni" width="750" height="557">
           </div>
         </div>
@@ -73,10 +73,10 @@
           <p>&ldquo;Our purpose is to provide a college home in which fellowship and alumni guidance lead to wholesome mental, moral, physical, and spiritual growth.&rdquo;</p>
           <cite>Theta Xi, Alpha Sigma Chapter</cite>
         </blockquote>
-        <div class="stats reveal" data-delay="1">
+        <div class="stats" data-stagger>
           <div class="stat"><strong>1948</strong><span>Alpha Sigma chartered at Bradley</span></div>
           <div class="stat"><strong>~$200K</strong><span>in scholarships awarded since 2011</span></div>
-          <div class="stat"><strong>$50K</strong><span>to brothers in chapter and national scholarships last year</span></div>
+          <div class="stat"><strong data-countup>$50K</strong><span>to brothers in chapter and national scholarships last year</span></div>
           <div class="stat"><strong>#1</strong><span>Theta Xi chapter nationwide for scholarship giving</span></div>
         </div>
       </div>
@@ -113,7 +113,7 @@
             <span class="go">Membership <span class="arrow" aria-hidden="true">&rarr;</span></span>
           </a>
           <a class="path scholar reveal" data-delay="1" href="scholarships.html">
-            <span class="figure-big">$50,000</span>
+            <span class="figure-big" data-countup>$50,000</span>
             <h3>Scholarships</h3>
             <p>The largest scholarship fund of any Theta Xi chapter in the country.</p>
             <span class="go">See scholarships <span class="arrow" aria-hidden="true">&rarr;</span></span>
@@ -127,7 +127,59 @@
       </div>
     </section>
 
-    <section class="section tight">
+
+    <section class="names" aria-labelledby="names-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="names-title">The names behind <em>Alpha Sigma</em></h2>
+          <p>From the eight men who founded Theta Xi to the brothers and alumni who lead the chapter today.</p>
+        </div>
+      </div>
+      <!-- Name ticker. To add a name, copy one <li> line inside the right <ul>. Don't copy the list
+           itself: js/site.js makes the loop copy for you. Names only from public, approved sources. -->
+      <div class="container">
+        <div class="ticker-row">
+          <span class="ticker-label">Founders, 1864</span>
+          <div class="ticker"><div class="ticker-track">
+            <ul>
+              <li>Peter Henry Fox</li>
+              <li>Ralph Gooding Packard</li>
+              <li>Christopher Chaplin Waite</li>
+              <li>Nathan H. Starbuck</li>
+              <li>Samuel Buel Jr.</li>
+              <li>Henry Harrison Farnum</li>
+              <li>Thomas Cole Raymond</li>
+              <li>George B. Brainerd</li>
+            </ul>
+          </div></div>
+        </div>
+        <div class="ticker-row alt">
+          <span class="ticker-label">Leading today</span>
+          <div class="ticker"><div class="ticker-track">
+            <ul>
+              <li>Kyle Richardson <small>President</small></li>
+              <li>Andre Isola <small>Vice President</small></li>
+              <li>Joey Traskaski <small>Treasurer</small></li>
+              <li>Tim Heyen <small>Alumni Board President</small></li>
+              <li>Andrew Davis <small>Alumni Board VP</small></li>
+              <li>Craig Janus <small>Alumni Board Treasurer</small></li>
+              <li>Evan Matravers <small>Chapter Advisor</small></li>
+              <li>Hunter Bent <small>Blue Iris Scholar, 2023</small></li>
+              <li>Andre Isola <small>Blue Iris Scholar, 2023</small></li>
+            </ul>
+          </div></div>
+        </div>
+        <!-- TODO (RAIL item 33): donor row, like bradleysig.org. Only add it once the alumni board
+             approves listing donor names (with an opt-out) and we have 25+ names. Copy a .ticker-row,
+             label it "Supporters", and list "Name <small>Class of 19xx</small>". -->
+        <div class="ticker-controls">
+          <p><a href="giving-back.html">Add your name to the next chapter</a></p>
+          <button class="ticker-toggle" type="button" aria-pressed="false">Pause</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight band">
       <div class="container visit reveal">
         <div>
           <h2>Come see the house</h2>
