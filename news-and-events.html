@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News and Events | Theta Xi Fraternity Alpha Sigma Chapter</title>
+  <meta name="description" content="News and upcoming events from the Theta Xi Fraternity, Alpha Sigma Chapter at Bradley University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/news-and-events.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <!-- TODO: swap in the crest image once we have a high quality copy (RAIL item 10) -->
+        <span class="brand-mark" aria-hidden="true">ΘΞ</span>
+        <span class="brand-name">Theta Xi <span>Alpha Sigma</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="scholarships.html">Scholarships</a></li>
+          <li><a href="news-and-events.html" aria-current="page">News and Events</a></li>
+          <li><a href="giving-back.html">Giving Back</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-intro">
+      <div class="container">
+        <h1>News and Events</h1>
+        <p class="page-sub">Alpha Sigma Chapter at Bradley University</p>
+      </div>
+    </section>
+
+    <!-- TODO: News posts (RAIL item 15). Add the recent posts list here, newest first.
+         Each post can use the same .card pattern as the home page. Example:
+
+    <section class="section news-section" aria-labelledby="recent-posts">
+      <div class="container">
+        <h2 id="recent-posts">Recent posts</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Post title</h3>
+            <p>One or two sentence summary of the post.</p>
+            <a class="button" href="#">Read more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <section class="section events-section" aria-labelledby="upcoming-events">
+      <div class="container">
+        <!-- TODO: Event cards (RAIL item 15). Put upcoming events in the .events-list below, one
+             .card per event, soonest first. Remove the empty message once the first event is added.
+             Example event card:
+
+        <article class="card event-card">
+          <p class="event-date">Date and time</p>
+          <h3>Event name</h3>
+          <p>Location and a short description.</p>
+        </article>
+        -->
+        <h2 id="upcoming-events">Upcoming Events</h2>
+        <div class="events-list">
+          <p class="events-empty">No upcoming events.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Copyright © <span id="year">2026</span> Theta Xi Fraternity Alpha Sigma Chapter. All Rights Reserved.</p>
+      <!-- TODO: this Instagram link shows "Profile isn't available" on the live site (RAIL item 2).
+           Replace the handle once we confirm the right one. -->
+      <a class="social" href="https://www.instagram.com/thetaxi_alphasigma" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+</body>
+</html>

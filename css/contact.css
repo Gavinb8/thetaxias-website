@@ -1,0 +1,53 @@
+/* Contact page styles. Builds on styles.css. */
+
+.contact-hero { min-height: 220px; }
+
+.contact-cards { grid-template-columns: repeat(2, 1fr); }
+.contact-h { font-size: 1.35rem; color: var(--blue-dark); }
+.contact-cards address { font-style: normal; margin: 0 0 1rem; color: var(--muted); }
+.contact-cards .person { margin: 0 0 0.5rem; flex: 0; }
+.contact-cards .person strong { color: var(--ink); }
+.contact-cards a { overflow-wrap: anywhere; font-weight: 600; }
+
+.forms-section { background: var(--wash); }
+.forms { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; align-items: start; }
+.form-box {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+.form-box h2 { font-size: 1.5rem; color: var(--blue-dark); }
+.form-box p { color: var(--muted); margin: 0 0 1.25rem; }
+
+.field { margin-bottom: 1rem; }
+.field label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.35rem; }
+.field input, .field textarea {
+  width: 100%;
+  font: inherit;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #aeb8c6;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+}
+.field textarea { resize: vertical; }
+.field input:focus, .field textarea:focus { outline: 3px solid var(--blue-bright); outline-offset: 1px; }
+.form-box button.button { border: 0; cursor: pointer; font-family: inherit; }
+.form-box .fine { font-size: 0.8rem; margin: 1.25rem 0 0; }
+
+.meet h2 { text-align: center; }
+.photo-placeholder {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  border: 2px dashed var(--line);
+  background: linear-gradient(135deg, var(--wash), #e3eaf5);
+  color: var(--muted);
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .contact-cards, .forms { grid-template-columns: 1fr; }
+}

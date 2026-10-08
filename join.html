@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join Theta Xi | Alpha Sigma Chapter</title>
+  <meta name="description" content="Join Theta Xi Fraternity, Alpha Sigma Chapter at Bradley University. Requirements for membership and how to get in touch.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/join.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <!-- TODO: swap in the crest image once we have a high quality copy (RAIL item 10) -->
+        <span class="brand-mark" aria-hidden="true">ΘΞ</span>
+        <span class="brand-name">Theta Xi <span>Alpha Sigma</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="join.html" aria-current="page">Join</a></li>
+          <li><a href="scholarships.html">Scholarships</a></li>
+          <li><a href="news-and-events.html">News and Events</a></li>
+          <li><a href="giving-back.html">Giving Back</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero page-hero">
+      <div class="hero-inner">
+        <h1>Join Theta Xi</h1>
+      </div>
+    </section>
+
+    <section class="section join-intro">
+      <div class="container join-grid">
+        <div class="join-copy">
+          <h2>Joining The Fraternity</h2>
+          <!-- TODO: check this is still current (minimum GPA requirement) -->
+          <p>Since 1948, the men of Theta Xi at Bradley University have always been actively seeking out the best and brightest men on campus to continue the proud traditions of the Fraternity. Other than a minimum GPA of 2.5 at Bradley, the requirements for membership are a strong sense of academic, moral and self-responsibility.</p>
+          <p>Membership in Theta Xi means an experience like no other in your college life. We strive to make the most of our stays at Bradley through our excellence in academics, social and service activities outside the classroom, leadership opportunities, and brothers who will be friends for life.</p>
+          <!-- TODO: confirm current contact (recruitment chairman email) -->
+          <p>Students at Bradley interested in membership are invited to meet our members and decide if Theta Xi is right for them. Contact our recruitment chairman at <a href="mailto:rc.thetaxi@gmail.com">rc.thetaxi@gmail.com</a> or fill out our membership inquiry form below if you’d like to visit the house or join in one of our many social activities.</p>
+          <p>Alumni, we value your referrals. If you know of good men on campus who have not joined a fraternity or of high school seniors headed to Bradley University, please recommend and impress upon them the values of Theta Xi, Alpha Sigma. You may submit prospect recommendations using the form below.</p>
+        </div>
+        <!-- TODO: swap in the real photo at assets/images/join.jpg (the old page had a photo here) -->
+        <div class="photo-placeholder" role="img" aria-label="Photo placeholder">
+          <span>Photo coming soon</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section form-section" id="inquiry">
+      <div class="container narrow">
+        <h2>Membership inquiry</h2>
+        <p class="form-lead">Drop us a line!</p>
+        <!-- TODO: form service needs to be wired up (action is a placeholder, nothing is submitted yet).
+             The old GoDaddy form used reCAPTCHA; a replacement spam check should come with the service. -->
+        <form class="inquiry-form" action="#" method="post">
+          <div class="field">
+            <label for="name">Name*</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Tell us what interests you about Theta Xi</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+          </div>
+          <button class="button" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Copyright © <span id="year">2026</span> Theta Xi Fraternity Alpha Sigma Chapter. All Rights Reserved.</p>
+      <!-- TODO: this Instagram link shows "Profile isn't available" on the live site (RAIL item 2).
+           Replace the handle once we confirm the right one. -->
+      <a class="social" href="https://www.instagram.com/thetaxi_alphasigma" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+</body>
+</html>
