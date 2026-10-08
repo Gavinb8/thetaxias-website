@@ -1,0 +1,30 @@
+# Images each saved page loads from GoDaddy's image servers (img1.wsimg.com).
+# Query strings removed. Grab originals from these when we need the photos.
+
+## About.html
+https://img1.wsimg.com/isteam/ip/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/IMG_5935.jpg
+https://img1.wsimg.com/isteam/ip/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/crest.png
+
+## Contact.html
+https://img1.wsimg.com/isteam/ip/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/IMG_5935.jpg
+https://img1.wsimg.com/isteam/ip/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/crest.png
+
+## Giving-Back.html
+https://img1.wsimg.com/isteam/ip/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/IMG_5935.jpg
+https://img1.wsimg.com/isteam/ip/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/crest.png
+
+## Home.html
+https://img1.wsimg.com/isteam/ip/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/IMG_5935.jpg
+https://img1.wsimg.com/isteam/ip/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/crest.png
+
+## Join.html
+https://img1.wsimg.com/isteam/ip/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/IMG_5935.jpg
+https://img1.wsimg.com/isteam/ip/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/crest.png
+
+## News-and-Events.html
+https://img1.wsimg.com/isteam/ip/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/IMG_5935.jpg
+https://img1.wsimg.com/isteam/ip/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/crest.png
+
+## Scholarships.html
+https://img1.wsimg.com/isteam/ip/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/IMG_5935.jpg
+https://img1.wsimg.com/isteam/ip/7f330f1b-02b2-44b6-a05c-9adb2cd2a439/crest.png
