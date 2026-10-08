@@ -24,3 +24,14 @@ Quick guide for the things on the site that move or need care. You only ever edi
 ## House rules
 - No em dashes in site text. Use a period, comma or colon.
 - Colors, fonts and spacing live at the top of `css/styles.css`. Motion lives in the "MOTION AND PHOTO TREATMENT" section at the bottom.
+
+## Writing for the site (writers start here)
+Your tasks are in the RAIL with "Writers" in the "Working on it" column. Send finished text to whoever is editing the site, or edit the HTML yourself.
+- **Short beats long.** Headlines 8 words or fewer. The text under a headline: 25 words or fewer. Home hero intro: 20 words max.
+- **Plain and specific.** Real numbers, names and years ("$49,975 last year") beat adjectives ("amazing", "elevate", "unparalleled").
+- **One voice.** Confident and warm, like a brother talking to an alumnus or a parent. No slang, no corporate filler.
+- **No em dashes or en dashes.** Use a period, comma or colon. Use a plain hyphen for ranges (2026-27).
+- **Same template for repeated things.** Every bio, event or news post follows the same pattern as the others on that page.
+- **Alt text** for photos: one plain sentence saying who and what is in the photo. Don't start with "Image of".
+- **No private info.** No phone numbers, personal emails or anything a brother hasn't agreed to put online. This repo and site are public.
+- **Approval:** the mission statement, donor names and alumni board details need chapter or alumni board sign-off before they go live.
