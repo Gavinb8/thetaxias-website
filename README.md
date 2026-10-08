@@ -12,6 +12,20 @@ The live site runs on GoDaddy Website Builder, which has no export option. The `
 2. Everyone runs the site on localhost while building.
 3. When it's ready, host it on GitHub Pages and point thetaxias.org at it by changing the DNS records in GoDaddy. GoDaddy keeps only the domain.
 
+## Run it on your computer (localhost)
+
+1. Get the repo onto your computer. Easiest is GitHub Desktop: File, Clone repository, pick `thetaxias-website`. Or run `git clone https://github.com/Gavinb8/thetaxias-website`.
+2. Open a terminal in the repo folder and run `python -m http.server 8000` (on Windows you can also use `py -m http.server 8000`).
+3. Open http://localhost:8000 in your browser. Refresh the page after you change a file.
+
+Before you start working, pull the latest changes so you don't overwrite someone else's work. When you're done, commit and push.
+
+## Folder layout
+
+- `index.html` and the other page files at the top level are the site itself.
+- `css/` and `js/` hold the shared styles and scripts.
+- `assets/images/` is where site photos go. Put the Home hero photo at `assets/images/hero.jpg`.
+
 ## What's in baseline/
 
 - `original/` holds the saved pages exactly as exported (Home, About, Join, Scholarships, News and Events, Giving Back, Contact). Don't edit these. They are the reference.
