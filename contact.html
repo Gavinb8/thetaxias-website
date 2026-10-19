@@ -84,22 +84,10 @@
 
     <section class="section band">
       <div class="container">
-        <!-- TODO: neither form is connected (RAIL item 20). Connect a form service, set each action,
-             and remove data-pending. Submissions must go to someone who reads them. -->
-        <div class="forms-grid">
+        <!-- TODO: this form is not connected yet (RAIL item 20). Connect a form service, set the action,
+             and remove data-pending. Submissions must go to someone who reads them (plan: recruitments@bradley.edu). -->
+        <div class="forms-grid single">
           <div class="panel reveal">
-            <h2>Subscribe</h2>
-            <p>Hear about upcoming events, fundraisers and chapter news.</p>
-            <form class="form" action="#" method="post" data-pending>
-              <div class="field">
-                <label for="sub-email">Email address</label>
-                <input type="email" id="sub-email" name="email" autocomplete="email" required>
-              </div>
-              <div class="actions"><button class="button" type="submit">Subscribe</button></div>
-              <p class="form-status" role="status" aria-live="polite"></p>
-            </form>
-          </div>
-          <div class="panel reveal" data-delay="1">
             <h2>Send a message</h2>
             <p>Questions about Theta Xi? Drop us a line.</p>
             <form class="form" action="#" method="post" data-pending>
@@ -122,19 +110,6 @@
             </form>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container meet">
-        <div class="reveal">
-          <h2>Better yet, meet us in person</h2>
-          <!-- TODO: confirm this is where we want people to come (RAIL item 19) -->
-          <address>The chapter house<br>1317 W. Fredonia Ave., Peoria, IL 61606</address>
-          <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=1317+W+Fredonia+Ave+Peoria+IL" target="_blank" rel="noopener">Get directions <span class="arrow" aria-hidden="true">&rarr;</span></a>
-        </div>
-        <!-- TODO: swap in a photo of the house at assets/images/meet-us.jpg -->
-        <div class="photo-slot reveal" data-delay="1"><span>Photo: the chapter house</span></div>
       </div>
     </section>
 

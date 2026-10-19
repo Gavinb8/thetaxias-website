@@ -5,7 +5,7 @@ Quick guide for the things on the site that move or need care. You only ever edi
 ## Photos
 - Save the photo in `assets/images/` (JPG, about 1600px on the long side is plenty).
 - Find the navy "Photo: ..." box on the page. The comment above it has the exact line to paste in.
-- Want the blue duotone look (like the Home and Scholarships photos)? Use `class="photo duotone"`. It shows full color on hover.
+- Photos show in full color. Use `class="photo"` and leave it at that. No tint or dot effects.
 
 ## The names ticker (Home page)
 - Each moving row is one `<ul>` of `<li>` names in `index.html`. Add or remove `<li>` lines. That's it.

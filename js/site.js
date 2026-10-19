@@ -67,30 +67,39 @@ document.documentElement.classList.add("js");
 
 // Count-up numbers. The real value is written in the HTML (e.g. "$50K"), so it is correct
 // without JS and for screen readers. This only animates from 0 up to that value, once.
+// The final value is also kept as an invisible copy, so the number always takes up its full
+// width and the text around it does not move while it counts (meeting note 10).
 (function () {
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var els = document.querySelectorAll("[data-countup]");
   if (reduce || !("IntersectionObserver" in window) || !els.length) return;
+  els.forEach(function (el) {
+    var text = el.textContent;
+    el.setAttribute("aria-label", text);
+    el.innerHTML = '<span class="cu"><span class="cu-sizer" aria-hidden="true"></span><span class="cu-live"></span></span>';
+    el.querySelector(".cu-sizer").textContent = text;
+    el.querySelector(".cu-live").textContent = text;
+  });
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;
       io.unobserve(entry.target);
       var el = entry.target;
-      var text = el.textContent;
+      var live = el.querySelector(".cu-live");
+      var text = el.getAttribute("aria-label");
       var match = text.match(/[\d,]+/);
-      if (!match) return;
+      if (!match || !live) return;
       var target = parseInt(match[0].replace(/,/g, ""), 10);
       var useCommas = match[0].indexOf(",") > -1;
       var start = null;
-      el.setAttribute("aria-label", text);
       function frame(t) {
         if (!start) start = t;
         var p = Math.min((t - start) / 1200, 1);
         var eased = 1 - Math.pow(1 - p, 4);
         var n = Math.round(target * eased);
-        el.textContent = text.replace(match[0], useCommas ? n.toLocaleString("en-US") : String(n));
+        live.textContent = text.replace(match[0], useCommas ? n.toLocaleString("en-US") : String(n));
         if (p < 1) requestAnimationFrame(frame);
-        else el.textContent = text;
+        else live.textContent = text;
       }
       requestAnimationFrame(frame);
     });
