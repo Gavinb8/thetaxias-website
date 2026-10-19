@@ -1012,9 +1012,11 @@ figcaption { margin-top: 0.75rem; font-size: 0.9rem; color: var(--muted); }
 
 /* Count-up numbers reserve their final width, so nothing around them shifts while they count.
    The hidden copy holds the space, the live copy sits on top of it in the same grid cell. */
-[data-countup] .cu { display: inline-grid; font: inherit; letter-spacing: inherit; color: inherit; font-variant-numeric: tabular-nums; }
-[data-countup] .cu > span { grid-area: 1 / 1; font: inherit; letter-spacing: inherit; color: inherit; margin: 0; display: block; }
-[data-countup] .cu > .cu-sizer { visibility: hidden; }
+/* Doubled attribute selector on purpose: it has to beat ".stat span" and ".on-navy .stat span" */
+[data-countup][data-countup] .cu { position: relative; display: inline-block; margin: 0; max-width: none; font: inherit; letter-spacing: inherit; color: inherit; font-variant-numeric: tabular-nums; }
+[data-countup][data-countup] .cu > span { display: inline; margin: 0; max-width: none; font: inherit; letter-spacing: inherit; color: inherit; }
+[data-countup][data-countup] .cu > .cu-sizer { visibility: hidden; }
+[data-countup][data-countup] .cu > .cu-live { position: absolute; left: 0; top: 0; white-space: nowrap; }
 
 /* Staggered build: children of [data-stagger] get --i from JS */
 .js [data-stagger] > * { opacity: 0; transform: translateY(16px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
@@ -1071,12 +1073,270 @@ figcaption { margin-top: 0.75rem; font-size: 0.9rem; color: var(--muted); }
   .ticker-label { width: auto; }
 }
 
+/* ------------------------------------------------------------------
+   ABOUT PAGE (meeting notes, 2026-10-19)
+   Side navigation, Meet the House, member cards, moving background.
+   ------------------------------------------------------------------ */
+
+.about-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 12.5rem minmax(0, 1fr);
+  column-gap: clamp(2rem, 4vw, 3.5rem);
+  isolation: isolate;
+}
+.about-body { min-width: 0; }
+.about-body .section { padding-block: clamp(2.5rem, 5vw, 4rem); }
+.about-body section[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
+/* Navy and tinted bands become panels inside the content column */
+.about-body .on-navy,
+.about-body .band {
+  padding-inline: clamp(1.25rem, 3vw, 2.5rem);
+  border-radius: var(--radius);
+  margin-block: clamp(0.5rem, 2vw, 1.5rem);
+}
+.about-body .band { border: 1px solid var(--line); }
+
+/* Side navigation: sticky on a computer, a bar under the header on a phone */
+.about-nav {
+  position: sticky;
+  top: calc(var(--header-h) + 2rem);
+  align-self: start;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+.about-nav-title {
+  margin: 0 0 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.about-nav ol { position: relative; margin: 0; padding: 0 0 0 1.1rem; list-style: none; border-left: 1px solid var(--line); }
+.about-nav a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.6rem 0.5rem 0.6rem 0.25rem;
+  color: var(--ink-soft);
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s var(--ease), transform 0.4s var(--ease);
+}
+.about-nav .n { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; color: var(--muted); font-variant-numeric: tabular-nums; transition: color 0.3s var(--ease); }
+.about-nav a:hover { color: var(--accent); }
+.about-nav a.is-active { color: var(--accent); font-weight: 600; transform: translateX(4px); }
+.about-nav a.is-active .n { color: var(--accent); }
+/* The moving marker. js/site.js sets --ind-y and --ind-h (and --ind-x / --ind-w on a phone). */
+.about-nav .about-nav-bar {
+  position: absolute;
+  left: -2px;
+  top: 0;
+  width: 3px;
+  height: var(--ind-h, 2.5rem);
+  background: var(--accent);
+  border-radius: 2px;
+  transform: translateY(var(--ind-y, 0px));
+  transition: transform 0.55s var(--ease), height 0.55s var(--ease);
+  pointer-events: none;
+}
+
+/* Background that moves: three slanted bars (the crest stripe) drift as you scroll, and a crest
+   watermark sits behind the mission. Photos are the best fix for a bland page; these hold the place
+   until we have them. */
+.about-bg { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.about-bg i {
+  position: absolute;
+  width: 14rem;
+  height: 70rem;
+  background: var(--accent-tint);
+  opacity: 0.55;
+  transform: translateY(calc(var(--sy, 0) * var(--rate, -0.08) * 1px)) rotate(32deg);
+}
+.about-bg i:nth-child(1) { top: -10rem; right: 8%; --rate: -0.07; }
+.about-bg i:nth-child(2) { top: 40rem; right: -6rem; width: 7rem; --rate: -0.14; opacity: 0.4; }
+.about-bg i:nth-child(3) { top: 95rem; left: 18%; width: 10rem; --rate: -0.1; opacity: 0.35; }
+.about-head { position: relative; }
+
+.mission { position: relative; }
+.mission::after {
+  content: "";
+  position: absolute;
+  right: -1rem;
+  top: 50%;
+  width: min(22rem, 40%);
+  aspect-ratio: 1 / 1.4;
+  transform: translateY(-50%);
+  background: url("../assets/images/crest.png") center / contain no-repeat;
+  opacity: 0.05;
+  filter: grayscale(1);
+  pointer-events: none;
+}
+.mission-grid > * { position: relative; z-index: 1; }
+
+/* Meet the house */
+.house .roster-title { margin-top: clamp(2rem, 4vw, 3rem); }
+.house-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.house-grid.amenities { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.house-tile .photo, .house-tile .photo-slot { aspect-ratio: 4 / 3; min-height: 0; width: 100%; }
+.house-tile .photo img { transition: transform 0.9s var(--ease); }
+.house-tile:hover .photo img { transform: scale(1.04); }
+.house-tile figcaption { margin-top: 0.6rem; font-weight: 500; color: var(--ink-soft); font-size: 0.95rem; }
+.house-visit { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-top: clamp(2rem, 4vw, 3rem); padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.house-visit address { font-style: normal; font-size: 1.1rem; color: var(--ink); }
+
+/* Member cards */
+.members.exec-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.members.compact-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.members .member {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 0.75rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color 0.3s var(--ease), transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+.members .member:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: var(--shadow); }
+.members .member .photo-slot, .members .member .photo { aspect-ratio: 4 / 5; min-height: 0; margin-bottom: 0.9rem; }
+.members.compact-grid .member .photo-slot, .members.compact-grid .member .photo { aspect-ratio: 1 / 1; }
+.members .member .photo-slot .initials { font-size: 2.6rem; }
+.members.compact-grid .member .photo-slot .initials { font-size: 2.1rem; }
+.member-plate { padding-inline: 0.35rem; }
+.member-plate h4 { margin: 0 0 0.15rem; font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; line-height: 1.2; }
+.members.compact-grid .member-plate h4 { font-size: 1.15rem; }
+.member-plate .member-role { margin: 0 0 0.2rem; }
+.member-plate .meta { margin: 0; }
+.member-year, .member-bio, .member-positions { margin: 0; padding-inline: 0.35rem; }
+.member-year { margin-top: 0.75rem; font-size: 0.88rem; font-weight: 600; color: var(--ink-soft); }
+.member-year:empty::before { content: "Class year coming soon"; font-weight: 500; font-style: italic; color: var(--muted); }
+.member-bio {
+  margin: 0.7rem 0.35rem 0;
+  padding: 0.7rem 0.8rem;
+  min-height: 3.8rem;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.member-bio:empty::before { content: "Bio coming soon."; font-style: italic; color: var(--muted); }
+.member-positions { margin-top: auto; padding-top: 0.8rem; font-size: 0.85rem; }
+.member-positions div { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 0.5rem; padding: 0.3rem 0; border-top: 1px solid var(--line); }
+.member-positions dt { color: var(--muted); font-weight: 600; letter-spacing: 0.04em; }
+.member-positions dd { margin: 0; color: var(--ink); font-weight: 500; }
+.member-positions dd:empty::before { content: "None listed yet"; font-weight: 400; font-style: italic; color: var(--muted); }
+
+@media (max-width: 1080px) {
+  .members.compact-grid, .members.exec-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .members.compact-grid, .members.exec-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Phones and small tablets: nav becomes a bar under the header, everything stacks */
+@media (max-width: 960px) {
+  .about-layout { grid-template-columns: minmax(0, 1fr); }
+  .about-nav {
+    position: sticky;
+    top: var(--header-h);
+    z-index: 40;
+    margin: 0 calc(var(--gutter) * -1);
+    padding: 0 var(--gutter);
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .about-nav::-webkit-scrollbar { display: none; }
+  .about-nav-title { display: none; }
+  .about-nav ol { display: flex; gap: 0.25rem; width: max-content; padding: 0; border-left: 0; }
+  .about-nav a { padding: 0.95rem 0.8rem; min-height: 48px; white-space: nowrap; font-size: 0.95rem; }
+  .about-nav .n { display: none; }
+  .about-nav a.is-active { transform: none; }
+  .about-nav .about-nav-bar { top: auto; bottom: 0; left: 0; height: 3px; width: var(--ind-w, 4rem); transform: translateX(var(--ind-x, 0px)); transition: transform 0.55s var(--ease), width 0.55s var(--ease); }
+  .about-body section[id] { scroll-margin-top: calc(var(--header-h) + 64px); }
+  .about-bg i:nth-child(1) { right: -3rem; }
+  .house-grid, .house-grid.amenities { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .house-grid .feature { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  /* One card per row, laid out sideways so 27 members do not make a mile-long page */
+  .members.exec-grid, .members.compact-grid { grid-template-columns: minmax(0, 1fr); gap: 0.75rem; }
+  .members .member {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto;
+    column-gap: 0.9rem;
+    align-items: start;
+    padding: 0.8rem;
+  }
+  .members .member .photo-slot, .members .member .photo,
+  .members.compact-grid .member .photo-slot, .members.compact-grid .member .photo { grid-row: 1 / 3; grid-column: 1; aspect-ratio: 1 / 1; width: 76px; margin: 0; }
+  .members .member.exec .photo-slot, .members .member.exec .photo { width: 96px; }
+  .members .member.exec { grid-template-columns: 96px minmax(0, 1fr); }
+  .members .member .photo-slot .initials, .members.compact-grid .member .photo-slot .initials { font-size: 1.6rem; }
+  .member-plate { grid-column: 2; grid-row: 1; padding: 0; }
+  .member-plate h4, .members.compact-grid .member-plate h4 { font-size: 1.15rem; }
+  .member-year { grid-column: 2; grid-row: 2; margin: 0.4rem 0 0; padding: 0; }
+  .member-bio { grid-column: 1 / -1; min-height: 0; margin: 0.8rem 0 0; font-size: 0.9rem; padding: 0.65rem 0.75rem; }
+  .member-positions { grid-column: 1 / -1; padding: 0.6rem 0 0; }
+  .house-visit { flex-direction: column; align-items: flex-start; }
+}
+
+/* Home: "Why Theta Xi" quote cards (meeting note 17) and the two links under the legacy text */
+.legacy-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; margin: 0; }
+.why-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.why-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  overflow: hidden;
+}
+.why-card::before {
+  content: "\201C";
+  position: absolute;
+  top: -0.05em;
+  right: 0.12em;
+  font-family: var(--font-display);
+  font-size: 7rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.14;
+  pointer-events: none;
+}
+.why-kind { margin: 0 0 1rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+.why-card blockquote { margin: 0 0 1.5rem; }
+.why-card blockquote p { margin: 0; font-family: var(--font-display); font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.35; color: var(--ink); }
+.why-card blockquote p:empty::before { content: "Quote coming soon. Why he joined and what Theta Xi gave him."; font-style: italic; color: var(--muted); }
+.why-card figcaption { margin-top: auto; display: flex; flex-direction: column; gap: 0.15rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.why-card .who { font-weight: 600; color: var(--ink); }
+.why-card .who:empty::before { content: "First Last"; font-weight: 500; color: var(--muted); }
+.why-card .what { font-size: 0.9rem; color: var(--muted); }
+.why-card .what:empty::before { content: "Class of 20XX"; }
+@media (max-width: 760px) { .why-grid { grid-template-columns: 1fr; } }
+
+/* Very narrow phones (320px): the brand line and Menu button together were 22px too wide */
+@media (max-width: 360px) {
+  .brand-name small { display: none; }
+  .nav-toggle { padding-inline: 0.7rem; }
+}
+
 /* Reduced motion: everything lands in its final state, the ticker becomes a static wrapped list */
 @media (prefers-reduced-motion: reduce) {
   .js .bend::before, .js .hero-visual::before { transform: rotate(32deg) scaleY(1); }
   .js .hero h1 em::after { transform: skewX(-32deg) scaleX(1); }
   .js [data-stagger] > * { opacity: 1; transform: none; }
   .path::after { display: none; }
+  .about-bg i { transform: rotate(32deg); }
+  .about-nav .about-nav-bar, .about-nav a { transition: none; }
   .js .ticker-track { animation: none; width: auto; }
   .ticker { -webkit-mask-image: none; mask-image: none; }
   .ticker ul { flex-wrap: wrap; row-gap: 0.5rem; }

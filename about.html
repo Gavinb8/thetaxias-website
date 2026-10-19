@@ -53,202 +53,577 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" class="about">
 
-    <section class="page-head">
+    <section class="page-head about-head">
       <div class="container">
         <h1 class="reveal">A brotherhood built to <em>last.</em></h1>
         <!-- TODO: rewrite this intro around who we are and what we do (RAIL item 8) -->
         <p class="lead reveal" data-delay="1">Theta Xi has kept the same constitution and ritual since 1864. At Bradley, Alpha Sigma has carried that tradition forward since 1948.</p>
-        <ul class="page-jump reveal" data-delay="2" aria-label="On this page">
-          <li><a href="#mission">Our mission</a></li>
-          <li><a href="#founding">Our founding</a></li>
-          <li><a href="#purposes">Our purposes</a></li>
-          <li><a href="#members">The chapter</a></li>
-          <li><a href="#officers">Alumni board</a></li>
-        </ul>
       </div>
     </section>
 
-    <section class="section mission" id="mission">
-      <div class="container mission-grid">
-        <h2 class="reveal">Our <em>mission</em></h2>
-        <div class="reveal" data-delay="1">
-          <!-- TODO: DRAFT mission statement written for the redesign. The chapter needs to approve or
-               rewrite it (RAIL item 36). Keep it to 2 or 3 sentences, no em dashes. -->
-          <p class="mission-statement">Alpha Sigma helps men at Bradley become strong students, steady leaders and brothers for life. We back that with real scholarships, a house worth coming home to, and alumni who keep the door open for the next class.</p>
-          <p class="mission-sign">Theta Xi, Alpha Sigma Chapter</p>
-        </div>
-      </div>
-    </section>
+    <div class="container about-layout">
+      <div class="about-bg" aria-hidden="true"><i></i><i></i><i></i></div>
 
-    <section class="section" id="founding">
-      <div class="container">
-        <div class="history">
-          <article class="milestone reveal">
-            <span class="year">1864</span>
-            <h3>Theta Xi is founded</h3>
-            <p>Founded at Rensselaer Polytechnic Institute in Troy, New York, on April 29, 1864. The Constitution and Ritual written at that first meeting are still in use today, so our tradition is truly continuous.</p>
-          </article>
-          <article class="milestone navy reveal" data-delay="1">
-            <span class="year">1948</span>
-            <h3>Alpha Sigma comes to Bradley</h3>
-            <p>Chartered on October 3, 1948, the Alpha Sigma Chapter has been part of Bradley University&rsquo;s Greek community for more than 75 years.</p>
-          </article>
-        </div>
-        <div class="founders reveal">
-          <h3>The eight founders</h3>
-          <ul>
-            <li>Peter Henry Fox</li>
-            <li>Ralph Gooding Packard</li>
-            <li>Christopher Chaplin Waite</li>
-            <li>Nathan H. Starbuck</li>
-            <li>Samuel Buel Jr.</li>
-            <li>Henry Harrison Farnum</li>
-            <li>Thomas Cole Raymond</li>
-            <li>George B. Brainerd</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section on-navy bend" id="purposes">
-      <div class="container purposes-grid">
-        <div class="purposes-aside reveal">
-          <h2>Our <em>purposes</em></h2>
-          <p>Through its alumni and undergraduate leadership, Theta Xi works to help each member develop:</p>
-          <!-- TODO: chapter photo. Original is IMG_5935.jpg in baseline/image-urls.txt. Save as assets/images/about-photo.jpg -->
-          <div class="photo-slot"><span>Photo: the chapter</span></div>
-        </div>
-        <ol class="purpose-list reveal" data-delay="1">
-          <li>Intellectual curiosity that assures the highest scholarship rating consistent with his ability</li>
-          <li>Habits that lead to better mental and physical health</li>
-          <li>Sincerity in his association with others and confidence in himself</li>
-          <li>Responsibility to chapter, college, community, and country</li>
-          <li>Leadership that comes from practicing the principles of democratic self-government</li>
-          <li>Interests and activities outside regular scholastic studies that employ spare time to advantage</li>
-          <li>Spiritual understanding that provides a reservoir of strength to draw upon when faced with conditions beyond comprehension</li>
+      <!-- Side navigation. On a computer it sits on the left and follows you down the page. On a phone it
+           becomes a bar under the header. The moving bar and the highlighted link are set by js/site.js
+           ("About page navigation"). To add a section: give the section an id, then add a link here. -->
+      <nav class="about-nav" aria-label="On this page">
+        <p class="about-nav-title">On this page</p>
+        <ol>
+          <li><a href="#mission"><span class="n">01</span>Our mission</a></li>
+          <li><a href="#house"><span class="n">02</span>Meet the house</a></li>
+          <li><a href="#founding"><span class="n">03</span>Our founding</a></li>
+          <li><a href="#purposes"><span class="n">04</span>Our purposes</a></li>
+          <li><a href="#members"><span class="n">05</span>The chapter</a></li>
+          <li><a href="#officers"><span class="n">06</span>Alumni board</a></li>
+          <li class="about-nav-bar" aria-hidden="true"></li>
         </ol>
-      </div>
-    </section>
+      </nav>
 
-    <section class="section" id="members">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2>The chapter</h2>
-          <p>The brothers and associate members of Alpha Sigma this year.</p>
-        </div>
-        <!-- Roster updated 2026-10-08 from the chapter roster: names, roll numbers and positions only.
-             Never put phone numbers or personal emails on this public site. TODO: short bios (RAIL item 6). -->
-        <h3 class="roster-title reveal">Executive board</h3>
-        <div class="members" data-stagger>
-          <article class="member">
-            <!-- TODO: photo: <div class="photo"><img src="assets/images/hunter-bent.jpg" alt="Hunter Bent"></div> -->
+      <div class="about-body">
+
+        <section class="section mission" id="mission">
+          <div class="mission-grid">
+            <h2 class="reveal">Our <em>mission</em></h2>
+            <div class="reveal" data-delay="1">
+              <!-- TODO: DRAFT mission statement written for the redesign. The chapter needs to approve or
+                   rewrite it (RAIL item 36). Keep it to 2 or 3 sentences, no em dashes. -->
+              <p class="mission-statement">Alpha Sigma helps men at Bradley become strong students, steady leaders and brothers for life. We back that with real scholarships, a house worth coming home to, and alumni who keep the door open for the next class.</p>
+              <p class="mission-sign">Theta Xi, Alpha Sigma Chapter</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section house" id="house">
+          <div class="section-head reveal">
+            <h2>Meet the <em>house</em></h2>
+            <p>1317 W. Fredonia Ave. A look at the rooms and the shared spaces brothers use every day.</p>
+          </div>
+
+          <!-- MEET THE HOUSE (meeting note 8). Each gray-blue box is a photo we still need. To swap one in,
+               replace the whole <div class="photo-slot">...</div> with:
+               <div class="photo"><img src="assets/images/FILE.jpg" alt="One plain sentence about what is in the photo" loading="lazy"></div>
+               File names are in the comment above each tile. Rooms: 2 to 3 photos. Amenities: 3 to 4 photos.
+               To add another tile, copy one <figure class="house-tile"> block. -->
+          <h3 class="roster-title reveal">Rooms</h3>
+          <div class="house-grid" data-stagger>
+            <figure class="house-tile feature">
+              <div class="photo"><img src="assets/images/house-renovation.jpg" alt="Brothers painting and building lofts during a chapter house room rebuild" loading="lazy"></div>
+              <figcaption>A room rebuild, loft by loft</figcaption>
+            </figure>
+            <figure class="house-tile">
+              <!-- TODO photo: assets/images/house-room-1.jpg (a typical brother's room) -->
+              <div class="photo-slot"><span>Photo: a brother&rsquo;s room</span></div>
+              <figcaption>A brother&rsquo;s room</figcaption>
+            </figure>
+            <figure class="house-tile">
+              <!-- TODO photo: assets/images/house-room-2.jpg (another room or a shared room) -->
+              <div class="photo-slot"><span>Photo: another room</span></div>
+              <figcaption>Shared room</figcaption>
+            </figure>
+          </div>
+
+          <h3 class="roster-title reveal">Amenities</h3>
+          <div class="house-grid amenities" data-stagger>
+            <figure class="house-tile">
+              <!-- TODO photo: assets/images/house-kitchen.jpg -->
+              <div class="photo-slot"><span>Photo: the kitchen</span></div>
+              <figcaption>Kitchen</figcaption>
+            </figure>
+            <figure class="house-tile">
+              <!-- TODO photo: assets/images/house-bathrooms.jpg -->
+              <div class="photo-slot"><span>Photo: the bathrooms</span></div>
+              <figcaption>Bathrooms</figcaption>
+            </figure>
+            <figure class="house-tile">
+              <!-- TODO photo: assets/images/house-common.jpg (living room, study space or whatever brothers hang out in) -->
+              <div class="photo-slot"><span>Photo: common space</span></div>
+              <figcaption>Common space</figcaption>
+            </figure>
+            <figure class="house-tile">
+              <!-- TODO photo: assets/images/house-extra.jpg (any other amenity worth showing: laundry, parking, patio...) -->
+              <div class="photo-slot"><span>Photo: another amenity</span></div>
+              <figcaption>More to see in person</figcaption>
+            </figure>
+          </div>
+
+          <div class="house-visit reveal">
+            <address>1317 W. Fredonia Ave., Peoria, IL 61606</address>
+            <a class="button ghost" href="https://www.google.com/maps/search/?api=1&amp;query=1317+W+Fredonia+Ave+Peoria+IL" target="_blank" rel="noopener">Get directions <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </section>
+
+        <section class="section" id="founding">
+          <div class="history">
+            <article class="milestone reveal">
+              <span class="year">1864</span>
+              <h3>Theta Xi is founded</h3>
+              <p>Founded at Rensselaer Polytechnic Institute in Troy, New York, on April 29, 1864. The Constitution and Ritual written at that first meeting are still in use today, so our tradition is truly continuous.</p>
+            </article>
+            <article class="milestone navy reveal" data-delay="1">
+              <span class="year">1948</span>
+              <h3>Alpha Sigma comes to Bradley</h3>
+              <p>Chartered on October 3, 1948, the Alpha Sigma Chapter has been part of Bradley University&rsquo;s Greek community for more than 75 years.</p>
+            </article>
+          </div>
+          <div class="founders reveal">
+            <h3>The eight founders</h3>
+            <ul>
+              <li>Peter Henry Fox</li>
+              <li>Ralph Gooding Packard</li>
+              <li>Christopher Chaplin Waite</li>
+              <li>Nathan H. Starbuck</li>
+              <li>Samuel Buel Jr.</li>
+              <li>Henry Harrison Farnum</li>
+              <li>Thomas Cole Raymond</li>
+              <li>George B. Brainerd</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section on-navy bend" id="purposes">
+          <div class="purposes-grid">
+            <div class="purposes-aside reveal">
+              <h2>Our <em>purposes</em></h2>
+              <p>Through its alumni and undergraduate leadership, Theta Xi works to help each member develop:</p>
+              <!-- TODO: chapter photo. Original is IMG_5935.jpg in baseline/image-urls.txt. Save as assets/images/about-photo.jpg -->
+              <div class="photo-slot"><span>Photo: the chapter</span></div>
+            </div>
+            <ol class="purpose-list reveal" data-delay="1">
+              <li>Intellectual curiosity that assures the highest scholarship rating consistent with his ability</li>
+              <li>Habits that lead to better mental and physical health</li>
+              <li>Sincerity in his association with others and confidence in himself</li>
+              <li>Responsibility to chapter, college, community, and country</li>
+              <li>Leadership that comes from practicing the principles of democratic self-government</li>
+              <li>Interests and activities outside regular scholastic studies that employ spare time to advantage</li>
+              <li>Spiritual understanding that provides a reservoir of strength to draw upon when faced with conditions beyond comprehension</li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="section" id="members">
+          <div class="section-head reveal">
+            <h2>The chapter</h2>
+            <p>The brothers and associate members of Alpha Sigma this year.</p>
+          </div>
+          <!-- MEMBER CARDS (meeting note 12). Every member has the same card. To fill one in:
+               1. Photo: replace the <div class="photo-slot">...</div> with
+                  <div class="photo"><img src="assets/images/first-last.jpg" alt="First Last"></div>
+                  (portrait, 4:5 works best)
+               2. member-year: standing and graduation year, e.g. Junior, Class of 2028
+               3. member-bio: 2 to 3 sentences (see "Writing for the site" in CONTENT.md)
+               4. Before: positions held in the past, e.g. Secretary, Social Chair. Leave empty if none.
+               Empty fields show a soft "coming soon" line so nothing looks broken.
+               Names, roll numbers and positions only until a brother approves more. This site is public.
+               Executive board stays first; everyone else is below it. -->
+          <h3 class="roster-title reveal">Executive board</h3>
+          <div class="members exec-grid" data-stagger>
+          <article class="member exec">
             <div class="photo-slot" aria-hidden="true"><span class="initials">HB</span></div>
-            <p class="member-role">President</p>
-            <h3>Hunter Bent</h3>
-            <p class="meta">&Alpha;&Sigma; 1016</p>
+            <div class="member-plate">
+              <p class="member-role">President</p>
+              <h4>Hunter Bent</h4>
+              <p class="meta">&Alpha;&Sigma; 1016</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>President</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
           </article>
-          <article class="member">
-            <!-- TODO: photo: <div class="photo"><img src="assets/images/domantas-balsys.jpg" alt="Domantas Balsys"></div> -->
+          <article class="member exec">
             <div class="photo-slot" aria-hidden="true"><span class="initials">DB</span></div>
-            <p class="member-role">Vice President</p>
-            <h3>Domantas Balsys</h3>
-            <p class="meta">&Alpha;&Sigma; 1034</p>
+            <div class="member-plate">
+              <p class="member-role">Vice President</p>
+              <h4>Domantas Balsys</h4>
+              <p class="meta">&Alpha;&Sigma; 1034</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Vice President</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
           </article>
-          <article class="member">
-            <!-- TODO: photo: <div class="photo"><img src="assets/images/adam-ondracek.jpg" alt="Adam Ondracek"></div> -->
+          <article class="member exec">
             <div class="photo-slot" aria-hidden="true"><span class="initials">AO</span></div>
-            <p class="member-role">Treasurer</p>
-            <h3>Adam Ondracek</h3>
-            <p class="meta">&Alpha;&Sigma; 1025</p>
+            <div class="member-plate">
+              <p class="member-role">Treasurer</p>
+              <h4>Adam Ondracek</h4>
+              <p class="meta">&Alpha;&Sigma; 1025</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Treasurer</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
           </article>
-          <article class="member">
-            <!-- TODO: photo: <div class="photo"><img src="assets/images/ryan-angulo.jpg" alt="Ryan Angulo"></div> -->
+          <article class="member exec">
             <div class="photo-slot" aria-hidden="true"><span class="initials">RA</span></div>
-            <p class="member-role">Secretary</p>
-            <h3>Ryan Angulo</h3>
-            <p class="meta">&Alpha;&Sigma; 1030</p>
+            <div class="member-plate">
+              <p class="member-role">Secretary</p>
+              <h4>Ryan Angulo</h4>
+              <p class="meta">&Alpha;&Sigma; 1030</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Secretary</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
           </article>
-          <article class="member">
-            <!-- TODO: photo: <div class="photo"><img src="assets/images/gavin-roby.jpg" alt="Gavin Roby"></div> -->
+          <article class="member exec">
             <div class="photo-slot" aria-hidden="true"><span class="initials">GR</span></div>
-            <p class="member-role">House Manager</p>
-            <h3>Gavin Roby</h3>
-            <p class="meta">&Alpha;&Sigma; 1027</p>
+            <div class="member-plate">
+              <p class="member-role">House Manager</p>
+              <h4>Gavin Roby</h4>
+              <p class="meta">&Alpha;&Sigma; 1027</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>House Manager</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
           </article>
-          <article class="member">
-            <!-- TODO: photo: <div class="photo"><img src="assets/images/tony-sendeha.jpg" alt="Tony Sendeha"></div> -->
+          <article class="member exec">
             <div class="photo-slot" aria-hidden="true"><span class="initials">TS</span></div>
-            <p class="member-role">Recruitment</p>
-            <h3>Tony Sendeha</h3>
-            <p class="meta">&Alpha;&Sigma; 1029</p>
+            <div class="member-plate">
+              <p class="member-role">Recruitment</p>
+              <h4>Tony Sendeha</h4>
+              <p class="meta">&Alpha;&Sigma; 1029</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Recruitment</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
           </article>
-          <article class="member">
-            <!-- TODO: photo: <div class="photo"><img src="assets/images/jack-tschosik.jpg" alt="Jack Tschosik"></div> -->
+          <article class="member exec">
             <div class="photo-slot" aria-hidden="true"><span class="initials">JT</span></div>
-            <p class="member-role">Scholarship</p>
-            <h3>Jack Tschosik</h3>
-            <p class="meta">&Alpha;&Sigma; 1024</p>
+            <div class="member-plate">
+              <p class="member-role">Scholarship</p>
+              <h4>Jack Tschosik</h4>
+              <p class="meta">&Alpha;&Sigma; 1024</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Scholarship</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
           </article>
-        </div>
-
-        <div class="roster-groups">
-          <div class="reveal">
-            <h3 class="roster-title">Brothers</h3>
-            <ul class="roster">
-              <li><strong>Harvey Newcomb</strong><span>&Alpha;&Sigma; 1018</span></li>
-              <li><strong>Cooper Pensinger</strong><span>&Alpha;&Sigma; 1026 &middot; President Elect</span></li>
-              <li><strong>Justin Seul</strong><span>&Alpha;&Sigma; 1031 &middot; Brotherhood Chair</span></li>
-              <li><strong>Gabe Fernandes</strong><span>&Alpha;&Sigma; 1032 &middot; Philanthropy</span></li>
-              <li><strong>Gavin Leutgert</strong><span>&Alpha;&Sigma; 1035</span></li>
-              <li><strong>Alex Safranek</strong><span>&Alpha;&Sigma; 1036</span></li>
-              <li><strong>Romeo Rosas</strong><span>&Alpha;&Sigma; 1037</span></li>
-              <li><strong>Robert Day</strong><span>&Alpha;&Sigma; 1038</span></li>
-              <li><strong>Zach DeMonte</strong><span>&Alpha;&Sigma; 1039 &middot; Brotherhood Chair</span></li>
-              <li><strong>Simon Bruening-Wright</strong><span>&Alpha;&Sigma; 1040</span></li>
-            </ul>
           </div>
-          <div class="reveal" data-delay="1">
-            <h3 class="roster-title">Associate members</h3>
-            <ul class="roster">
-              <li><strong>Sam Albrecht</strong></li>
-              <li><strong>Grady Burson</strong></li>
-              <li><strong>Isaac Calderon</strong></li>
-              <li><strong>Reece Ehlermann</strong></li>
-              <li><strong>James Fleming</strong></li>
-              <li><strong>Eli Sering</strong></li>
-              <li><strong>Cody Splingaire</strong></li>
-              <li><strong>Connor Topf</strong></li>
-              <li><strong>Hudson Turman</strong></li>
-              <li><strong>Alejandro Wilson</strong></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="section band" id="officers">
-      <div class="container boards">
-        <div class="reveal">
-          <h2>Alumni board</h2>
-          <p class="lead">The Alpha Sigma Association looks after the house, the scholarship endowments and the alumni network.</p>
-          <a class="text-link" href="contact.html">Contact the association <span class="arrow" aria-hidden="true">&rarr;</span></a>
-        </div>
-        <div class="panel board reveal" data-delay="1">
-          <!-- TODO: Gavin is getting the updated alumni board list (RAIL item 9). -->
-          <dl>
-            <div><dt>President</dt><dd>Tim Heyen</dd></div>
-            <div><dt>Vice President</dt><dd>Andrew Davis</dd></div>
-            <div><dt>Treasurer</dt><dd>Craig Janus</dd></div>
-            <div><dt>Secretary</dt><dd>Andrew Bogetz</dd></div>
-            <div><dt>Officer of Estate</dt><dd>Chris Leonard</dd></div>
-            <div><dt>Chapter Advisor</dt><dd>Evan Matravers</dd></div>
-            <div><dt>Deputy Chapter Advisor</dt><dd>Trent Hootman</dd></div>
-          </dl>
-        </div>
+          <h3 class="roster-title reveal">Brothers</h3>
+          <div class="members compact-grid" data-stagger>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">HN</span></div>
+            <div class="member-plate">
+              <p class="member-role">Brother</p>
+              <h4>Harvey Newcomb</h4>
+              <p class="meta">&Alpha;&Sigma; 1018</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Brother</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">CP</span></div>
+            <div class="member-plate">
+              <p class="member-role">President Elect</p>
+              <h4>Cooper Pensinger</h4>
+              <p class="meta">&Alpha;&Sigma; 1026</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>President Elect</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">JS</span></div>
+            <div class="member-plate">
+              <p class="member-role">Brotherhood Chair</p>
+              <h4>Justin Seul</h4>
+              <p class="meta">&Alpha;&Sigma; 1031</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Brotherhood Chair</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">GF</span></div>
+            <div class="member-plate">
+              <p class="member-role">Philanthropy</p>
+              <h4>Gabe Fernandes</h4>
+              <p class="meta">&Alpha;&Sigma; 1032</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Philanthropy</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">GL</span></div>
+            <div class="member-plate">
+              <p class="member-role">Brother</p>
+              <h4>Gavin Leutgert</h4>
+              <p class="meta">&Alpha;&Sigma; 1035</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Brother</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">AS</span></div>
+            <div class="member-plate">
+              <p class="member-role">Brother</p>
+              <h4>Alex Safranek</h4>
+              <p class="meta">&Alpha;&Sigma; 1036</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Brother</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">RR</span></div>
+            <div class="member-plate">
+              <p class="member-role">Brother</p>
+              <h4>Romeo Rosas</h4>
+              <p class="meta">&Alpha;&Sigma; 1037</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Brother</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">RD</span></div>
+            <div class="member-plate">
+              <p class="member-role">Brother</p>
+              <h4>Robert Day</h4>
+              <p class="meta">&Alpha;&Sigma; 1038</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Brother</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">ZD</span></div>
+            <div class="member-plate">
+              <p class="member-role">Brotherhood Chair</p>
+              <h4>Zach DeMonte</h4>
+              <p class="meta">&Alpha;&Sigma; 1039</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Brotherhood Chair</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">SW</span></div>
+            <div class="member-plate">
+              <p class="member-role">Brother</p>
+              <h4>Simon Bruening-Wright</h4>
+              <p class="meta">&Alpha;&Sigma; 1040</p>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Brother</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          </div>
+
+          <h3 class="roster-title reveal">Associate members</h3>
+          <div class="members compact-grid" data-stagger>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">SA</span></div>
+            <div class="member-plate">
+              <p class="member-role">Associate member</p>
+              <h4>Sam Albrecht</h4>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Associate member</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">GB</span></div>
+            <div class="member-plate">
+              <p class="member-role">Associate member</p>
+              <h4>Grady Burson</h4>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Associate member</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">IC</span></div>
+            <div class="member-plate">
+              <p class="member-role">Associate member</p>
+              <h4>Isaac Calderon</h4>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Associate member</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">RE</span></div>
+            <div class="member-plate">
+              <p class="member-role">Associate member</p>
+              <h4>Reece Ehlermann</h4>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Associate member</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">JF</span></div>
+            <div class="member-plate">
+              <p class="member-role">Associate member</p>
+              <h4>James Fleming</h4>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Associate member</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">ES</span></div>
+            <div class="member-plate">
+              <p class="member-role">Associate member</p>
+              <h4>Eli Sering</h4>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Associate member</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">CS</span></div>
+            <div class="member-plate">
+              <p class="member-role">Associate member</p>
+              <h4>Cody Splingaire</h4>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Associate member</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">CT</span></div>
+            <div class="member-plate">
+              <p class="member-role">Associate member</p>
+              <h4>Connor Topf</h4>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Associate member</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">HT</span></div>
+            <div class="member-plate">
+              <p class="member-role">Associate member</p>
+              <h4>Hudson Turman</h4>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Associate member</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          <article class="member compact">
+            <div class="photo-slot" aria-hidden="true"><span class="initials">AW</span></div>
+            <div class="member-plate">
+              <p class="member-role">Associate member</p>
+              <h4>Alejandro Wilson</h4>
+            </div>
+            <p class="member-year"></p>
+            <p class="member-bio"></p>
+            <dl class="member-positions">
+              <div><dt>Now</dt><dd>Associate member</dd></div>
+              <div><dt>Before</dt><dd></dd></div>
+            </dl>
+          </article>
+          </div>
+        </section>
+
+        <section class="section band" id="officers">
+          <div class="boards">
+            <div class="reveal">
+              <h2>Alumni board</h2>
+              <p class="lead">The Alpha Sigma Association looks after the house, the scholarship endowments and the alumni network.</p>
+              <a class="text-link" href="contact.html">Contact the association <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class="panel board reveal" data-delay="1">
+              <!-- TODO: keep this list as recent as possible. Get the current board from the alumni association
+                   every semester (RAIL items 9 and 38). -->
+              <dl>
+                <div><dt>President</dt><dd>Tim Heyen</dd></div>
+                <div><dt>Vice President</dt><dd>Andrew Davis</dd></div>
+                <div><dt>Treasurer</dt><dd>Craig Janus</dd></div>
+                <div><dt>Secretary</dt><dd>Andrew Bogetz</dd></div>
+                <div><dt>Officer of Estate</dt><dd>Chris Leonard</dd></div>
+                <div><dt>Chapter Advisor</dt><dd>Evan Matravers</dd></div>
+                <div><dt>Deputy Chapter Advisor</dt><dd>Trent Hootman</dd></div>
+              </dl>
+            </div>
+          </div>
+        </section>
+
       </div>
-    </section>
+    </div>
 
   </main>
 

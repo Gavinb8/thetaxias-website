@@ -129,6 +129,66 @@ document.documentElement.classList.add("js");
   });
 })();
 
+// About page navigation. Highlights the link for the section you are in and slides the marker to it
+// (vertical on a computer, along the bottom on a phone). Also feeds the drifting background bars.
+(function () {
+  var nav = document.querySelector(".about-nav");
+  if (!nav) return;
+  var list = nav.querySelector("ol");
+  var links = Array.prototype.slice.call(nav.querySelectorAll("a"));
+  var pairs = links.map(function (a) {
+    return { a: a, sec: document.getElementById(a.getAttribute("href").slice(1)) };
+  }).filter(function (p) { return p.sec; });
+  if (!pairs.length) return;
+  var current = null;
+  var mqPhone = window.matchMedia("(max-width: 960px)");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function place(link) {
+    if (mqPhone.matches) {
+      list.style.setProperty("--ind-x", link.offsetLeft + "px");
+      list.style.setProperty("--ind-w", link.offsetWidth + "px");
+      var target = link.offsetLeft - (nav.clientWidth - link.offsetWidth) / 2;
+      nav.scrollTo({ left: Math.max(0, target), behavior: reduce ? "auto" : "smooth" });
+    } else {
+      list.style.setProperty("--ind-y", link.offsetTop + "px");
+      list.style.setProperty("--ind-h", link.offsetHeight + "px");
+    }
+  }
+  function setActive(link) {
+    if (link === current) return;
+    links.forEach(function (l) {
+      var on = l === link;
+      l.classList.toggle("is-active", on);
+      if (on) l.setAttribute("aria-current", "location"); else l.removeAttribute("aria-current");
+    });
+    current = link;
+    place(link);
+  }
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      ticking = false;
+      document.documentElement.style.setProperty("--sy", String(Math.round(window.scrollY)));
+      // Active section = the last one whose top has passed a line a third of the way down the screen
+      var line = window.innerHeight * 0.33;
+      var active = pairs[0];
+      pairs.forEach(function (p) {
+        if (p.sec.getBoundingClientRect().top <= line) active = p;
+      });
+      // At the very bottom of the page, the last section wins even if it is short
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) active = pairs[pairs.length - 1];
+      setActive(active.a);
+    });
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", function () { if (current) place(current); onScroll(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { if (current) place(current); });
+  onScroll();
+})();
+
 // Forms aren't connected to a service yet (RAIL item 20). Until they are, stop the
 // submit and say so, instead of silently doing nothing.
 // Remove data-pending from a form once its action points at a real endpoint.
