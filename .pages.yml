@@ -1,0 +1,115 @@
+# Pages CMS setup (https://pagescms.org). This file is what gives the committee
+# simple forms for editing the site instead of raw files. HOWTO.md explains how to use it.
+# Pictures uploaded in the CMS go to assets/images/.
+media:
+  input: assets/images
+  output: assets/images
+
+content:
+  - name: members
+    label: Members (cards on About)
+    type: file
+    path: data/members.json
+    format: json
+    list: true
+    fields:
+      - { name: name, label: Full name, type: string, required: true }
+      - name: group
+        label: Which group
+        type: select
+        required: true
+        options:
+          values: [Executive board, Brothers, Associate members]
+      - { name: role, label: Position now (or Brother / Associate member), type: string }
+      - { name: roll, label: Roll number (digits only, leave empty for associate members), type: string }
+      - { name: photo, label: Photo (portrait works best), type: image }
+      - name: standing
+        label: Class standing
+        type: select
+        options:
+          values: [Freshman, Sophomore, Junior, Senior, Graduate student]
+      - { name: grad_year, label: Graduation year (like 2028), type: string }
+      - { name: bio, label: Bio (2 to 3 sentences), type: text }
+      - { name: past_positions, label: Past positions in the chapter, type: string }
+
+  - name: alumni-board
+    label: Alumni board (About)
+    type: file
+    path: data/alumni-board.json
+    format: json
+    list: true
+    fields:
+      - { name: title, label: Title (like Treasurer), type: string, required: true }
+      - { name: name, label: Name, type: string, required: true }
+
+  - name: house
+    label: Meet the house (photos on About)
+    type: file
+    path: data/house.json
+    format: json
+    list: true
+    fields:
+      - name: section
+        label: Section
+        type: select
+        required: true
+        options:
+          values: [Rooms, Amenities]
+      - { name: caption, label: Caption, type: string, required: true }
+      - { name: photo, label: Photo, type: image }
+      - { name: alt, label: Describe the photo in one plain sentence (for screen readers), type: string }
+      - { name: featured, label: Show this one large (use for one Rooms photo), type: boolean }
+
+  - name: quotes
+    label: Why Theta Xi quotes
+    type: file
+    path: data/quotes.json
+    format: json
+    list: true
+    fields:
+      - name: kind
+        label: Brother or alumnus
+        type: select
+        required: true
+        options:
+          values: [Brother, Alumnus]
+      - { name: quote, label: Their quote (1 to 3 sentences, their own words, get their OK first), type: text }
+      - { name: name, label: First and last name, type: string }
+      - { name: detail, label: Class year, and for alumni what they do now, type: string }
+
+  - name: events
+    label: Upcoming events (News and Events)
+    type: file
+    path: data/events.json
+    format: json
+    list: true
+    fields:
+      - { name: title, label: Event name, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: time, label: Time (like 6:00 pm), type: string }
+      - { name: place, label: Place, type: string }
+      - { name: description, label: One line about it, type: string }
+      - { name: link, label: Link for more info (optional, starts with https://), type: string }
+
+  - name: news
+    label: News posts (News and Events)
+    type: file
+    path: data/news.json
+    format: json
+    list: true
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Date, type: date }
+      - { name: summary, label: 1 to 2 sentence summary, type: text }
+      - { name: photo, label: Photo, type: image }
+      - { name: photo_alt, label: Describe the photo in one plain sentence, type: string }
+      - { name: link, label: Link (optional, starts with https://), type: string }
+
+  - name: site
+    label: Site settings (Instagram feed)
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - { name: instagram_feed_id, label: Behold feed ID (leave empty until the Instagram feed is set up), type: string }
+      - { name: instagram_url, label: Instagram profile link, type: string }

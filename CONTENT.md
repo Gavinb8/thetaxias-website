@@ -1,5 +1,8 @@
 # Editing content
 
+> **Start with HOWTO.md.** Members, the alumni board, house photos, Why Theta Xi quotes, events, news and the Instagram
+> feed are edited through simple forms (Pages CMS) or the files in `data/`. This page covers the rest: text that lives in the page files.
+
 Quick guide for the things on the site that move or need care. You only ever edit HTML text. Don't touch `js/site.js` for content changes.
 
 ## Photos

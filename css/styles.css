@@ -1390,3 +1390,13 @@ figcaption { margin-top: 0.75rem; font-size: 0.9rem; color: var(--muted); }
 .ig-post:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 .ig-post .photo-slot, .ig-post .photo { aspect-ratio: 1 / 1; min-height: 0; }
 @media (max-width: 640px) { .ig-grid { grid-template-columns: 1fr 1fr; } .ig-post:first-child { grid-column: 1 / -1; } }
+
+/* Why Theta Xi teaser on Home (the quotes live on why.html) */
+.why-teaser-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem 2rem; }
+.why-teaser-inner h2 { margin-bottom: 0.35rem; }
+.why-teaser-inner p { margin: 0; max-width: 40rem; }
+.load-error { color: var(--muted); font-style: italic; }
+.news-post .photo { margin-bottom: 0.9rem; }
+[hidden] { display: none !important; }
+.news-post .photo { aspect-ratio: 16 / 10; }
+.news-post .photo img { width: 100%; height: 100%; object-fit: cover; }

@@ -39,3 +39,6 @@ Before you start working, pull the latest changes so you don't overwrite someone
 - Work items live in the Google Sheet "Theta Xi Website RAIL". Update it when you pick something up.
 - The same sheet has a "Weekly Log" tab. Add a line for anything you finished so the weekly report to the team is easy to write.
 - Don't use em dashes in visible site text. Use a period, comma or colon.
+
+## Editing content
+Start with `HOWTO.md`. Members, the alumni board, house photos, Why Theta Xi quotes, events, news and the Instagram feed live in `data/*.json` and are edited through Pages CMS forms (`.pages.yml`). `js/content.js` turns those files into the page content.

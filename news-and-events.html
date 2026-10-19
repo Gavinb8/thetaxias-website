@@ -43,6 +43,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="why.html">Why Theta Xi</a></li>
           <li><a href="scholarships.html">Scholarships</a></li>
           <li><a href="news-and-events.html" aria-current="page">News and Events</a></li>
           <li><a href="giving-back.html">Giving Back</a></li>
@@ -67,21 +68,9 @@
         <div class="section-head reveal">
           <h2 id="upcoming">Upcoming events</h2>
         </div>
-        <!-- TODO: events (RAIL item 15). Add one .event per event, soonest first, inside .events,
-             then delete the .empty-state block. Copy this:
-
-        <div class="events">
-          <article class="event">
-            <time datetime="2026-11-14"><b>14</b><small>Nov</small></time>
-            <div>
-              <h3>Event name</h3>
-              <p>6:00 pm &middot; Location. One line about the event.</p>
-            </div>
-            <a class="text-link" href="#">Details</a>
-          </article>
-        </div>
-        -->
-        <div class="empty-state reveal">
+        <!-- Events come from data/events.json (HOWTO.md). Past events hide themselves. -->
+        <div class="events" data-render="events" data-empty="no-events" data-stagger aria-busy="true"></div>
+        <div class="empty-state reveal" id="no-events">
           <img src="assets/images/crest.png" alt="" width="60" height="83">
           <div>
             <h3>No events posted yet</h3>
@@ -96,14 +85,12 @@
       <div class="container">
         <div class="section-head reveal">
           <h2 id="ig-title">Latest from <em>Instagram</em></h2>
-          <p>Our three most recent posts.</p>
+          <p>Our latest posts.</p>
         </div>
-        <!-- TODO (RAIL item 37): auto-updating Instagram feed.
-             Plan: connect the chapter Instagram to a free feed service such as Behold (behold.so),
-             then replace the three placeholder tiles below with its embed code, or load its JSON feed
-             into these same .ig-post tiles so they keep our look. Needs the correct handle first (RAIL item 2).
-             Until then the tiles link to the profile. -->
-        <div class="ig-grid" data-stagger>
+        <!-- Instagram feed (RAIL item 37). To turn on the live feed, paste the Behold feed ID into
+             data/site.json (HOWTO.md, "Turn on the Instagram feed"). Until then the tiles below link to the profile. -->
+        <div id="ig-feed" data-render="instagram"></div>
+        <div class="ig-grid" id="ig-fallback" data-stagger>
           <a class="ig-post" href="https://www.instagram.com/bu_theta.xi" target="_blank" rel="noopener"><div class="photo-slot"><span>Latest post</span></div></a>
           <a class="ig-post" href="https://www.instagram.com/bu_theta.xi" target="_blank" rel="noopener"><div class="photo-slot"><span>Post 2</span></div></a>
           <a class="ig-post" href="https://www.instagram.com/bu_theta.xi" target="_blank" rel="noopener"><div class="photo-slot"><span>Post 3</span></div></a>
@@ -114,8 +101,15 @@
       </div>
     </section>
 
-    <!-- TODO: recent news posts (RAIL item 15). Add a "Recent news" section here, newest first.
-         The .awards / .award pattern from scholarships works well for post cards. -->
+    <section class="section" aria-labelledby="news-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="news-title">Recent news</h2>
+        </div>
+        <!-- News posts come from data/news.json (HOWTO.md). This section hides itself while the list is empty. -->
+        <div class="awards" data-render="news" data-stagger aria-busy="true"></div>
+      </div>
+    </section>
 
   </main>
 
@@ -131,6 +125,7 @@
           <h2>Chapter</h2>
           <ul>
             <li><a href="about.html">About us</a></li>
+            <li><a href="why.html">Why Theta Xi</a></li>
             <li><a href="about.html#members">Members</a></li>
             <li><a href="news-and-events.html">News and events</a></li>
             <li><a href="join.html">Join Theta Xi</a></li>
@@ -160,6 +155,7 @@
     </div>
   </footer>
 
+  <script src="js/content.js"></script>
   <script src="js/site.js"></script>
 </body>
 </html>

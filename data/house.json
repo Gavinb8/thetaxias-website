@@ -1,0 +1,51 @@
+[
+  {
+    "section": "Rooms",
+    "caption": "A room rebuild, loft by loft",
+    "photo": "assets/images/house-renovation.jpg",
+    "alt": "Brothers painting and building lofts during a chapter house room rebuild",
+    "featured": true
+  },
+  {
+    "section": "Rooms",
+    "caption": "A brother's room",
+    "photo": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "section": "Rooms",
+    "caption": "Shared room",
+    "photo": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "section": "Amenities",
+    "caption": "Kitchen",
+    "photo": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "section": "Amenities",
+    "caption": "Bathrooms",
+    "photo": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "section": "Amenities",
+    "caption": "Common space",
+    "photo": "",
+    "alt": "",
+    "featured": false
+  },
+  {
+    "section": "Amenities",
+    "caption": "More to see in person",
+    "photo": "",
+    "alt": "",
+    "featured": false
+  }
+]
