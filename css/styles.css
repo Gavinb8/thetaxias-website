@@ -1438,7 +1438,8 @@ h1, h2, h3, h4, p, li, dd, a { overflow-wrap: break-word; }
     border-top: 1px solid var(--line);
     border-radius: var(--radius) var(--radius) 0 0;
     box-shadow: var(--shadow);
-    max-height: min(75dvh, 34rem);
+    /* Tall enough for every link, so Join is never hidden behind the Menu button when the sheet opens */
+    max-height: calc(100dvh - var(--header-h));
     padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
     transform: translateY(16px);
   }
@@ -1463,6 +1464,8 @@ h1, h2, h3, h4, p, li, dd, a { overflow-wrap: break-word; }
 }
 @media (max-height: 700px) {
   .legacy-grid .sticky, .purposes-aside { position: static; }
+  /* Short phones: tighter menu rows so the whole menu still fits above the Menu button */
+  .site-nav a { padding-block: 0.6rem; }
 }
 
 /* Touch screens: every tap target at least 44px tall */
