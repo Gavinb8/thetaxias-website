@@ -234,7 +234,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   font-size: 0.92rem;
   font-weight: 400;
   letter-spacing: 0.01em;
-  color: var(--muted);
+  color: var(--ink-soft); /* --muted dropped to 4.4:1 when dark sections scroll under the see-through header (RAIL 55) */
 }
 
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 0.1rem; }
@@ -1400,3 +1400,75 @@ figcaption { margin-top: 0.75rem; font-size: 0.9rem; color: var(--muted); }
 [hidden] { display: none !important; }
 .news-post .photo { aspect-ratio: 16 / 10; }
 .news-post .photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ------------------------------------------------------------------
+   MOBILE PASS (phones, portrait and landscape)
+   Kept in one block at the end so it is easy to find, tweak or remove.
+   ------------------------------------------------------------------ */
+
+/* Safety net: nothing may push the page sideways. "clip" (not "hidden") keeps sticky bars working. */
+html, body { overflow-x: clip; }
+/* A long word or email breaks onto the next line instead of running off the screen */
+h1, h2, h3, h4, p, li, dd, a { overflow-wrap: break-word; }
+
+/* Content that js/content.js fills in starts with some height, so the page does not jump when it lands */
+[data-render][aria-busy="true"] { min-height: 16rem; }
+
+@media (max-width: 1080px) {
+  /* Menu button floats at the bottom right (thumb reach) and the menu opens as a sheet above it.
+     The header goes solid: a blur is heavy on cheap phones, and it would trap the fixed button inside the header. */
+  .site-header { background: var(--bg); -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .nav-toggle {
+    position: fixed;
+    right: max(1rem, env(safe-area-inset-right));
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    z-index: 2;
+    min-height: 52px;
+    padding: 0 1.25rem;
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+    box-shadow: var(--shadow);
+    font-size: 1rem;
+  }
+  .site-nav {
+    inset: auto 0 0 0;
+    z-index: 1;
+    border-bottom: 0;
+    border-top: 1px solid var(--line);
+    border-radius: var(--radius) var(--radius) 0 0;
+    box-shadow: var(--shadow);
+    max-height: min(75dvh, 34rem);
+    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+    transform: translateY(16px);
+  }
+  /* Room at the very end of the page so the floating button never sits on the last links */
+  .footer-base { padding-bottom: 5.5rem; }
+  .about-nav { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--bg); }
+}
+
+@media (max-width: 480px) {
+  .button { white-space: normal; text-align: center; justify-content: center; }
+  .actions .button { flex: 1 1 100%; }
+  .stat strong { font-size: clamp(1.75rem, 9vw, 2.3rem); }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* Phone held sideways: the screen is short, so shrink the header and menu rows, and
+   don't pin tall blocks that would be taller than the screen */
+@media (max-height: 480px) and (orientation: landscape) {
+  :root { --header-h: 56px; }
+  .brand img { width: 28px; }
+  .site-nav a { padding-block: 0.55rem; }
+}
+@media (max-height: 700px) {
+  .legacy-grid .sticky, .purposes-aside { position: static; }
+}
+
+/* Touch screens: every tap target at least 44px tall */
+@media (pointer: coarse) {
+  .text-link, .ticker-toggle, .about-nav a { min-height: 44px; }
+  .page-jump a { padding-block: 0.75rem 0.5rem; }
+  .site-footer li a, .site-footer p a { display: inline-flex; align-items: center; min-height: 44px; }
+  .site-footer ul { gap: 0; }
+}

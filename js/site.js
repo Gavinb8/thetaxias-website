@@ -19,6 +19,10 @@ document.documentElement.classList.add("js");
   nav.addEventListener("click", function (e) {
     if (e.target.closest("a")) setOpen(false);
   });
+  // Tapping anywhere outside the menu closes it
+  document.addEventListener("click", function (e) {
+    if (nav.classList.contains("open") && !nav.contains(e.target) && !toggle.contains(e.target)) setOpen(false);
+  });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && nav.classList.contains("open")) {
       setOpen(false);
