@@ -1,0 +1,5 @@
+# Theta Xi Alpha Sigma. Every page is public, so search engines can read all of it.
+User-agent: *
+Allow: /
+
+Sitemap: https://thetaxias.org/sitemap.xml

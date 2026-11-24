@@ -1473,3 +1473,11 @@ h1, h2, h3, h4, p, li, dd, a { overflow-wrap: break-word; }
   .site-footer li a, .site-footer p a { display: inline-flex; align-items: center; min-height: 44px; }
   .site-footer ul { gap: 0; }
 }
+
+/* ------------------------------------------------------------------
+   404 (page not found). Reuses the page head, buttons and page-jump links. */
+.not-found { min-height: calc(70vh - var(--header-h)); display: flex; align-items: center; }
+.not-found .lead { margin-bottom: 2rem; }
+.not-found .page-jump { margin-top: 2.5rem; }
+/* main gets focus from the skip link on this page only. No ring on the whole page. */
+#main[tabindex="-1"]:focus { outline: none; }

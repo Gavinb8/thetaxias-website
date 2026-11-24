@@ -38,3 +38,7 @@ Your tasks are in the RAIL with "Writers" in the "Working on it" column. Send fi
 - **Alt text** for photos: one plain sentence saying who and what is in the photo. Don't start with "Image of".
 - **No private info.** No phone numbers, personal emails or anything a brother hasn't agreed to put online. This repo and site are public.
 - **Approval:** the mission statement, donor names and alumni board details need chapter or alumni board sign-off before they go live.
+
+## Adding or renaming a page
+- Add or change its line in `sitemap.xml` so search engines find it.
+- `404.html` is the "page not found" page. It has its own copy of the header and footer, so if you change the menu or footer on the other pages, change it there too.

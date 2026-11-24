@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Every public page on thetaxias.org. If you add or rename a page, add or change its line here too.
+     Leave out 404.html and anything that isn't a page (data, docs, CMS files). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://thetaxias.org/</loc></url>
+  <url><loc>https://thetaxias.org/about.html</loc></url>
+  <url><loc>https://thetaxias.org/why.html</loc></url>
+  <url><loc>https://thetaxias.org/scholarships.html</loc></url>
+  <url><loc>https://thetaxias.org/news-and-events.html</loc></url>
+  <url><loc>https://thetaxias.org/giving-back.html</loc></url>
+  <url><loc>https://thetaxias.org/contact.html</loc></url>
+  <url><loc>https://thetaxias.org/join.html</loc></url>
+</urlset>
