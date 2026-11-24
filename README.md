@@ -25,7 +25,7 @@ Before you start working, pull the latest changes so you don't overwrite someone
 - `index.html` and the other page files at the top level are the site itself.
 - `css/styles.css` is the only stylesheet. Colors, fonts and spacing are tokens at the top of that file, so change them there instead of in page files. `js/site.js` handles the mobile menu, scroll fade-ins and the placeholder form message.
 - Photos we don't have yet show as navy "Photo: ..." boxes. Each one has a TODO comment above it with the file name to save and the `<img>` line to swap in.
-- `docs/site-map.html` is an interactive map of the whole site: every page and file with a plain-English description. Download it or open it in your browser (double-click it after you clone the repo). It is a snapshot, so ask Gavin to refresh it after a batch of changes.
+- The old site map (docs/site-map.html) was taken out on Nov 23, 2026 because it was out of date. Ask me (Connor) if you need a copy.
 - `assets/images/` is where site photos go. Put the Home hero photo at `assets/images/hero.jpg`.
 
 ## Ground rules
