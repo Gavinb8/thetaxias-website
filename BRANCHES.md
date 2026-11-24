@@ -45,7 +45,7 @@ Nothing was merged into `main`. Nothing was deleted. No GoDaddy or DNS settings 
 
 ## Known open items that affect launch
 
-- Contact and Join forms still have `action="#"` and send nowhere (RAIL 20, 58).
-- `baseline/` is a saved copy of the old GoDaddy site. When GitHub Pages is turned on, it will be published as live pages, so decide before then whether to remove it from the launch branch (it stays in Git history either way).
+- Contact and Join forms are connected to Formspree (Nov 23, 2026). Messages go to Connor's email for now and will switch to the chapter email once it exists (RAIL 20, 58).
+- `baseline/` (the saved copy of the old GoDaddy site) was removed from `launch-prep` (Nov 23, 2026). Connor kept a copy, and it stays in Git history.
 - docs/site-map.html is removed (Nov 23, 2026). Connor kept a copy.
 - The repo and the GitHub Pages domain verification are on a personal account. The plan is to move the repo to a chapter GitHub organization before launch so it can be handed down each year.
