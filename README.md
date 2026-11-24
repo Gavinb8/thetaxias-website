@@ -4,11 +4,11 @@ Public website for Theta Xi Fraternity, Alpha Sigma Chapter at Bradley Universit
 
 ## Where we are
 
-The live site runs on GoDaddy Website Builder, which has no export option. The `baseline/` folder is a saved copy of the live pages from October 2026, so we have a starting point. We are rebuilding the site as a simple static site that we can work on together.
+The live site runs on GoDaddy Website Builder, which has no export option. We saved a copy of the live pages in October 2026 (the old `baseline/` folder) as a starting point. It was taken out of `launch-prep` on 2026-11-24 so it doesn't get published once GitHub Pages is on. It's still in the Git history if anyone needs it. We are rebuilding the site as a simple static site that we can work on together.
 
 ## Plan
 
-1. Rebuild each page as plain HTML and CSS, using the baseline as the reference.
+1. Rebuild each page as plain HTML and CSS, using the old site as the reference.
 2. Everyone runs the site on localhost while building.
 3. When it's ready, host it on GitHub Pages and point thetaxias.org at it by changing the DNS records in GoDaddy. GoDaddy keeps only the domain.
 
@@ -27,12 +27,6 @@ Before you start working, pull the latest changes so you don't overwrite someone
 - Photos we don't have yet show as navy "Photo: ..." boxes. Each one has a TODO comment above it with the file name to save and the `<img>` line to swap in.
 - `docs/site-map.html` is an interactive map of the whole site: every page and file with a plain-English description. Download it or open it in your browser (double-click it after you clone the repo). It is a snapshot, so ask Gavin to refresh it after a batch of changes.
 - `assets/images/` is where site photos go. Put the Home hero photo at `assets/images/hero.jpg`.
-
-## What's in baseline/
-
-- `original/` holds the saved pages exactly as exported (Home, About, Join, Scholarships, News and Events, Giving Back, Contact). Don't edit these. They are the reference.
-- `assets/` holds the few images the export saved.
-- `image-urls.txt` lists the photos each page loads from GoDaddy's servers, since the export didn't save most of them.
 
 ## Ground rules
 
