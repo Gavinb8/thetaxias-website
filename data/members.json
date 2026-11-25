@@ -3,297 +3,154 @@
     "name": "Hunter Bent",
     "group": "Executive board",
     "role": "President",
-    "roll": "1016",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1016"
   },
   {
     "name": "Domantas Balsys",
     "group": "Executive board",
     "role": "Vice President",
-    "roll": "1034",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1034"
   },
   {
     "name": "Adam Ondracek",
     "group": "Executive board",
     "role": "Treasurer",
-    "roll": "1025",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1025"
   },
   {
     "name": "Ryan Angulo",
     "group": "Executive board",
     "role": "Secretary",
-    "roll": "1030",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1030"
   },
   {
     "name": "Gavin Roby",
     "group": "Executive board",
     "role": "House Manager",
     "roll": "1027",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "standing": "Junior",
+    "grad_year": "2027"
   },
   {
     "name": "Tony Sendeha",
     "group": "Executive board",
     "role": "Recruitment",
-    "roll": "1029",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1029"
   },
   {
     "name": "Jack Tschosik",
     "group": "Executive board",
     "role": "Scholarship",
-    "roll": "1024",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1024"
   },
   {
     "name": "Harvey Newcomb",
     "group": "Brothers",
     "role": "Brother",
-    "roll": "1018",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1018"
   },
   {
     "name": "Cooper Pensinger",
     "group": "Brothers",
     "role": "President Elect",
-    "roll": "1026",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1026"
   },
   {
     "name": "Justin Seul",
     "group": "Brothers",
     "role": "Brotherhood Chair",
-    "roll": "1031",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1031"
   },
   {
     "name": "Gabe Fernandes",
     "group": "Brothers",
     "role": "Philanthropy",
-    "roll": "1032",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1032"
   },
   {
     "name": "Gavin Leutgert",
     "group": "Brothers",
     "role": "Brother",
-    "roll": "1035",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1035"
   },
   {
     "name": "Alex Safranek",
     "group": "Brothers",
     "role": "Brother",
-    "roll": "1036",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1036"
   },
   {
     "name": "Romeo Rosas",
     "group": "Brothers",
     "role": "Brother",
-    "roll": "1037",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1037"
   },
   {
     "name": "Robert Day",
     "group": "Brothers",
     "role": "Brother",
-    "roll": "1038",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1038"
   },
   {
     "name": "Zach DeMonte",
     "group": "Brothers",
     "role": "Brotherhood Chair",
-    "roll": "1039",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1039"
   },
   {
     "name": "Simon Bruening-Wright",
     "group": "Brothers",
     "role": "Brother",
-    "roll": "1040",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "roll": "1040"
   },
   {
     "name": "Sam Albrecht",
     "group": "Associate members",
-    "role": "Associate member",
-    "roll": "",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "role": "Associate member"
   },
   {
     "name": "Grady Burson",
     "group": "Associate members",
-    "role": "Associate member",
-    "roll": "",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "role": "Associate member"
   },
   {
     "name": "Isaac Calderon",
     "group": "Associate members",
-    "role": "Associate member",
-    "roll": "",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "role": "Associate member"
   },
   {
     "name": "Reece Ehlermann",
     "group": "Associate members",
-    "role": "Associate member",
-    "roll": "",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "role": "Associate member"
   },
   {
     "name": "James Fleming",
     "group": "Associate members",
-    "role": "Associate member",
-    "roll": "",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "role": "Associate member"
   },
   {
     "name": "Eli Sering",
     "group": "Associate members",
-    "role": "Associate member",
-    "roll": "",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "role": "Associate member"
   },
   {
     "name": "Cody Splingaire",
     "group": "Associate members",
-    "role": "Associate member",
-    "roll": "",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "role": "Associate member"
   },
   {
     "name": "Connor Topf",
     "group": "Associate members",
-    "role": "Associate member",
-    "roll": "",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "role": "Associate member"
   },
   {
     "name": "Hudson Turman",
     "group": "Associate members",
-    "role": "Associate member",
-    "roll": "",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "role": "Associate member"
   },
   {
     "name": "Alejandro Wilson",
     "group": "Associate members",
-    "role": "Associate member",
-    "roll": "",
-    "photo": "",
-    "standing": "",
-    "grad_year": "",
-    "bio": "",
-    "past_positions": ""
+    "role": "Associate member"
   }
 ]
