@@ -6,7 +6,9 @@ Almost everything that changes each semester is edited through simple forms, not
 ## The short version
 
 1. Open **app.pagescms.org** and sign in (see "Getting access" below).
-2. Pick the **thetaxias-website** repo.
+2. Pick the **thetaxias-website** repo, then switch the branch menu from main to **launch-prep**.
+   Until the new site launches, all edits go on launch-prep. If the CMS offers to create a `.pages.yml`,
+   you're still on main: don't press it, switch branches instead.
 3. Pick what you want to change from the list on the left (Members, Events, and so on).
 4. Edit the form, then press **Save**. The site updates a minute or two after it is saved.
 
@@ -108,5 +110,5 @@ The same content lives in plain files in the `data` folder: `members.json`, `alu
 - The member, house, quote, event and news content loads when the page opens. If someone has JavaScript turned
   off, those parts show a short message instead.
 - Saving in the CMS saves straight to the repo's branch. Check what you changed on the site afterward.
-- The CMS works on whichever branch you pick. Make sure the `data` folder and `.pages.yml` are on `main`
-  before the committee starts using it.
+- The CMS works on whichever branch you pick. Until launch, `main` has no forms, so always pick `launch-prep`.
+  After `launch-prep` is merged into `main` at launch, use `main` from then on.

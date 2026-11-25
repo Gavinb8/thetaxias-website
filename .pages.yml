@@ -85,7 +85,7 @@ content:
     list: true
     fields:
       - { name: title, label: Event name, type: string, required: true }
-      - { name: date, label: Date, type: date, required: true }
+      - { name: date, label: Date, type: date, required: true, options: { format: yyyy-MM-dd } }
       - { name: time, label: Time (like 6:00 pm), type: string }
       - { name: place, label: Place, type: string }
       - { name: description, label: One line about it, type: string }
@@ -99,7 +99,7 @@ content:
     list: true
     fields:
       - { name: title, label: Title, type: string, required: true }
-      - { name: date, label: Date, type: date }
+      - { name: date, label: Date, type: date, options: { format: yyyy-MM-dd } }
       - { name: summary, label: 1 to 2 sentence summary, type: text }
       - { name: photo, label: Photo, type: image }
       - { name: photo_alt, label: Describe the photo in one plain sentence, type: string }
