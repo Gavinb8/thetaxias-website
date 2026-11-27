@@ -91,6 +91,24 @@ content:
       - { name: description, label: One line about it, type: string }
       - { name: link, label: Link for more info (optional, starts with https://), type: string }
 
+  - name: newsletters
+    label: Newsletters (News and Events)
+    type: file
+    path: data/newsletters.json
+    format: json
+    list: true
+    fields:
+      - { name: title, label: Newsletter name (like The Taxi News), type: string, required: true }
+      - name: term
+        label: Issue
+        type: select
+        required: true
+        options:
+          values: [Spring, Summer, Fall, Winter]
+      - { name: year, label: Year (like 2026), type: string, required: true }
+      - { name: file, label: The PDF (upload it here), type: file, required: true }
+      - { name: summary, label: One line about what is inside (optional), type: string }
+
   - name: news
     label: News posts (News and Events)
     type: file

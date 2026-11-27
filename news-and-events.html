@@ -81,7 +81,19 @@
       </div>
     </section>
 
-    <section class="section band" aria-labelledby="ig-title">
+    <section class="section band tight" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="container split">
+        <div class="reveal">
+          <h2 id="newsletter-title">The Taxi <em>News</em></h2>
+          <p class="lead">Our alumni newsletter. Catch up on scholarships, the house and the newest brothers.</p>
+        </div>
+        <!-- Newsletters come from data/newsletters.json (HOWTO.md, "Add a newsletter"). Newest shows first.
+             This section hides itself while the list is empty. -->
+        <div class="downloads reveal" data-delay="1" data-render="newsletters" aria-busy="true"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ig-title">
       <div class="container">
         <div class="section-head reveal">
           <h2 id="ig-title">Latest from <em>Instagram</em></h2>
