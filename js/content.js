@@ -172,6 +172,34 @@
       document.head.appendChild(s);
     },
 
+    // Newsletter PDFs, newest first. Hides its section while the list is empty.
+    newsletters: function (box, rows) {
+      var order = { Winter: 0, Spring: 1, Summer: 2, Fall: 3 };
+      var issues = rows.filter(function (n) { return has(n.title) && has(n.file); })
+        .sort(function (a, b) {
+          var ya = parseInt(a.year, 10) || 0, yb = parseInt(b.year, 10) || 0;
+          if (ya !== yb) return yb - ya;
+          return (order[b.term] || 0) - (order[a.term] || 0);
+        });
+      var section = box.closest("section");
+      if (!issues.length) { if (section) section.hidden = true; return; }
+      issues.forEach(function (n, i) {
+        var file = String(n.file).trim();
+        if (!/^(https?:\/\/|\/?assets\/)/.test(file)) return;
+        var row = el("div", "download");
+        var text = el("div");
+        var name = [n.title, [n.term, n.year].filter(has).join(" ")].filter(has).join(", ");
+        text.appendChild(el("strong", "", name));
+        text.appendChild(el("span", "", has(n.summary) ? n.summary : (i === 0 ? "Latest issue (PDF)" : "PDF")));
+        row.appendChild(text);
+        var a = el("a", i === 0 ? "button" : "button ghost", "Read");
+        a.href = file; a.target = "_blank"; a.rel = "noopener";
+        a.setAttribute("aria-label", "Read " + name + " (PDF, opens in a new tab)");
+        row.appendChild(a);
+        box.appendChild(row);
+      });
+    },
+
     news: function (box, rows) {
       var posts = rows.map(function (n) { n = Object.assign({}, n); n.date = iso(n.date); return n; })
         .filter(function (n) { return has(n.title); })
@@ -202,7 +230,7 @@
   // Which data file feeds which renderer
   var files = {
     members: "members", alumniBoard: "alumni-board", house: "house",
-    quotes: "quotes", events: "events", news: "news", instagram: "site"
+    quotes: "quotes", events: "events", news: "news", newsletters: "newsletters", instagram: "site"
   };
 
   var targets = Array.prototype.slice.call(document.querySelectorAll("[data-render]"));

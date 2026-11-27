@@ -1,11 +1,11 @@
 [
   {
     "title": "President",
-    "name": "Tim Heyen"
+    "name": "Andrew Davis"
   },
   {
     "title": "Vice President",
-    "name": "Andrew Davis"
+    "name": "Braeton Richardson"
   },
   {
     "title": "Treasurer",
@@ -13,11 +13,11 @@
   },
   {
     "title": "Secretary",
-    "name": "Andrew Bogetz"
+    "name": "Joey Traskaski"
   },
   {
     "title": "Officer of Estate",
-    "name": "Chris Leonard"
+    "name": "Trevor Smith"
   },
   {
     "title": "Chapter Advisor",
@@ -26,5 +26,9 @@
   {
     "title": "Deputy Chapter Advisor",
     "name": "Trent Hootman"
+  },
+  {
+    "title": "Faculty Advisor",
+    "name": "Dr. Tegan Nusser"
   }
 ]

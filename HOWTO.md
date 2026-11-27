@@ -21,6 +21,7 @@ Almost everything that changes each semester is edited through simple forms, not
 | Meet the house (photos on About) | The room and amenity photos |
 | Why Theta Xi quotes | The quote cards on the Why Theta Xi page |
 | Upcoming events | Events on News and Events. Past events hide themselves |
+| Newsletters | The Taxi News list on News and Events. Newest issue shows first |
 | News posts | The Recent news section. It stays hidden until you add a post |
 | Site settings | The Instagram feed ID |
 
@@ -70,6 +71,10 @@ thing used to sort, soonest first.
 **Add a Why Theta Xi quote.** Open Why Theta Xi quotes. One item per person: Brother or Alumnus, the quote,
 their first and last name, and their class year (alumni can add what they do now). Only use words the person
 gave you and approved. Never write a quote for someone.
+
+**Add a newsletter.** Open Newsletters, add an item. Type the name (The Taxi News), pick the issue
+(Spring, Fall and so on), type the year, and upload the PDF. The newest issue goes to the top on its own,
+so older issues can be added in any order. Try to keep each PDF under about 10 MB so it opens fast on a phone.
 
 ## Turn on the Instagram feed (free)
 
